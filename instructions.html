@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+	<html class="base fullscreen loaded">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>deck: Slides</title>
+		<meta name="description" content="Slides">
+
+		<link rel="stylesheet" type="text/css" href="lib/offline-v2.css">
+		<style id="user-css-output" type="text/css">.reveal {
+  /*
+/* IE10+ */
+  background-image: -ms-linear-gradient(top, #5a1991 0%, #00baff 100%);
+  /* Mozilla Firefox */
+  background-image: -moz-linear-gradient(top, #5a1991 0%, #00baff 100%);
+  /* Opera */
+  background-image: -o-linear-gradient(top, #5a1991 0%, #00baff 100%);
+  /* Webkit (Safari/Chrome 10) */
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #5a1991), color-stop(100, #00baff));
+  /* Webkit (Chrome 11+) */
+  background-image: -webkit-linear-gradient(top, #5a1991 0%, #00baff 100%);
+  /* W3C Markup */
+  background-image: linear-gradient(to bottom, #5a1991 0%, #00baff 100%);
+}
+.reveal .slides {
+  color: #ffffff;
+}
+</style>
+	</head>
+	<body class="reveal-viewport theme-font-helvetica theme-color-white-blue">
+		<div class="reveal">
+			<div class="slides">
+				<section data-background-size="initial"><div class="sl-block" data-block-type="text" style="width: 798px; left: 80px; top: 66px; height: auto;" data-block-id="23ad44cdc809a496bb64438ea2c605a8">
+    <div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 12;">
+        <p>
+            <span style="font-size:56px">Welcome to the Cisco Cloud Services exercise</span>
+        </p>
+    </div>
+</div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 602px; left: 179px; top: 312px;" data-block-id="49bfa16f9652642e3ebc7f9e003253d6">
+    <div class="sl-block-content fragment" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;" data-fragment-index="0">
+<p><span style="font-size:48px"><em>The goal of this exercise is to provide you with first hand experience with the OpenStack Horizon portal</em> </span></p>
+</div>
+</div>
+<div class="sl-block" data-block-type="image" style="width: 326.261780104712px; height: 108px; left: 741px; top: 700px;" data-block-id="9555f8f819b453da379b84b3df9c992b"><div class="sl-block-content" style="z-index: 13;"><img src="deck/985855-cloud_practice_white.png" style="visibility: visible;" data-natural-width="577" data-natural-height="191"></div></div></section><section data-background-size="initial"><div class="sl-block" data-block-type="text" style="width: 798px; left: 46px; top: 138px; height: auto;" data-block-id="f1f06b021aaf30acdffcf2e624414d70">
+    <div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 12;">
+<p style="text-align:left"><span style="font-size:48px">In this exercise you will create a web site that you can access from your laptop or mobile device.</span></p>
+</div>
+</div>
+<div class="sl-block" data-block-type="image" style="width: 326.261780104712px; height: 108px; left: 741px; top: 700px;" data-block-id="058f1fd3a071f298c6fa0940cc24c9d6"><div class="sl-block-content" style="z-index: 13;"><img src="deck/985855-cloud_practice_white.png" style="visibility: visible;" data-natural-width="577" data-natural-height="191"></div></div></section><section data-background-size="initial"><div class="sl-block" data-block-type="text" style="width: 798px; left: 46px; top: 138px; height: auto;" data-block-id="d32c94db5019c8dc51acb0b0240465cc">
+    <div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 12;">
+<p style="text-align:left"><span style="font-size:48px">You will build the web site from scratch - including networking, virtual machines, and as a stretch target, a load balancer</span></p>
+</div>
+</div>
+<div class="sl-block" data-block-type="image" style="width: 326.261780104712px; height: 108px; left: 741px; top: 700px;" data-block-id="9dc6921584b9bdda5c31e6852f0973a8"><div class="sl-block-content" style="z-index: 13;"><img src="deck/985855-cloud_practice_white.png" style="visibility: visible;" data-natural-width="577" data-natural-height="191"></div></div></section><section data-background-size="initial"><div class="sl-block" data-block-type="text" style="width: 798px; left: 48px; top: 140px; height: auto;" data-block-id="77858e4f47fa8d1788f3365d5a010ae2">
+    <div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 12;">
+<p style="text-align:left"><span style="font-size:48px">Let's begin!</span></p>
+</div>
+</div>
+<div class="sl-block" data-block-type="image" style="width: 326.261780104712px; height: 108px; left: 741px; top: 700px;" data-block-id="86dc73ddfac3890171b19d591f033ff5"><div class="sl-block-content" style="z-index: 13;"><img src="deck/985855-cloud_practice_white.png" style="visibility: visible;" data-natural-width="577" data-natural-height="191"></div></div></section><section data-background-size="initial"><div class="sl-block" data-block-type="text" style="width: 833px; left: 71px; top: 70px; height: auto;" data-block-id="1364126e1c197e46033b8b89ab03c447">
+    <div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10; color: rgb(255, 255, 255);">
+        <p style="text-align:left">
+            <span style="font-size:48px">Access the Telstra multi cloud portal</span>
+        </p>
+    </div>
+</div>
+<div class="sl-block" data-block-type="image" style="width: 326.261780104712px; height: 108px; left: 741px; top: 700px;" data-block-id="c074aae51999f0304a882d4e00d019f5">
+    <div class="sl-block-content" style="z-index: 11;">
+        <img src="deck/985855-cloud_practice_white.png" style="visibility: visible;" data-natural-width="577" data-natural-height="191">
+        </div>
+    </div>
+    <div class="sl-block" data-block-type="image" data-block-id="81bb523ef4832b55119da7ebcd3787bd" style="min-width: 30px; min-height: 30px; width: 499.812265331665px; height: 350px; left: 220px; top: 175px;">
+        <div class="sl-block-content" style="z-index: 12; border-width: 10px;">
+            <img src="deck/989132-MyCloudPortalStep1.png" style="visibility: visible;" data-natural-width="1141" data-natural-height="799">
+            </div>
+        </div>
+        
+<div class="sl-block" data-block-type="text" data-block-id="4bfe97425ebd033b6ed81f2b9a8857de" style="height: auto; min-width: 30px; min-height: 30px; width: 397px; left: 282px; top: 560px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; opacity: 0.97; border: 1px solid rgb(255, 255, 255); border-radius: 10px; background-color: rgb(255, 255, 255);">
+<p><a href="https://mycloud.telstra.com" target="_blank">https://mycloud.telstra.com</a></p>
+</div></div>
+
+<div class="sl-block" data-block-type="text" data-block-id="da29b44d0ff55f9006fd109e5d2c0705" style="height: auto; min-width: 30px; min-height: 30px; width: 833px; left: 64px; top: 630px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;">
+<p>Log in with the credentials provided by your lab host</p>
+</div></div></section><section data-background-size="initial"><div class="sl-block" data-block-type="text" style="width: 798px; left: 82px; top: -35px; height: auto;" data-block-id="e8c91eadf9a706653e0a21873e6240fb">
+    <div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 13; color: rgb(0, 30, 130);" dir="ui"><h1><span style="font-size:32px">Access Cisco Cloud Services</span></h1></div>
+</div>
+<div class="sl-block" data-block-type="image" style="width: 326.261780104712px; height: 108px; left: 741px; top: 700px;" data-block-id="f99dd5825f88be70650cf0c773312efb"><div class="sl-block-content" style="z-index: 11;"><img src="deck/985855-cloud_practice_white.png" style="visibility: visible;" data-natural-width="577" data-natural-height="191"></div></div>
+<div class="sl-block" data-block-type="shape" data-block-id="d3563e3de24cccb46f379b22465e5516" style="min-width: 4px; min-height: 4px; width: 960px; height: 700px; left: 0px; top: 0px;"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(255, 255, 255)" data-shape-stretch="true" style="z-index: 12;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 960 700"><rect width="960" height="700" class="shape-element" fill="rgb(255, 255, 255)"></rect></svg></div></div>
+
+<div class="sl-block" data-block-type="text" data-block-id="818e50b2128214f71da427e92724558c" style="height: auto; min-width: 30px; min-height: 30px; width: 402px; left: 181px; top: 509px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15; color: rgb(0, 0, 0);">
+<p style="text-align:left"><span style="font-size:20px"><span style="font-size:16px">To begin, click 'Enter console</span>'</span></p>
+</div></div>
+
+<div class="sl-block" data-block-type="image" data-block-id="3f7afdbca90d48537ddccd61392e785d" style="min-width: 30px; min-height: 30px; width: 30.6149068322981px; height: 31px; left: 145px; top: 517px;"><div class="sl-block-content" style="z-index: 18;"><img src="deck/997104-BlueIcon1.png" style="visibility: visible;" data-natural-width="159" data-natural-height="161"></div></div>
+<div class="sl-block" data-block-type="image" data-block-id="cf7a26c049961c0cbaf859a0c0347e49" style="min-width: 30px; min-height: 30px; width: 590.08429118774px; height: 417px; left: 185.45785440613px; top: 62px;"><div class="sl-block-content" style="z-index: 23;"><img src="deck/997141-MyCloudLogIn01.png" style="visibility: visible;" data-natural-width="1108" data-natural-height="783"></div></div></section><section data-background-size="initial"><div class="sl-block" data-block-type="text" style="width: 798px; left: 83px; top: -35px; height: auto;" data-block-id="5d42f04cec8cdb04501311319adf0e87">
+    <div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 12; color: rgb(0, 30, 130);">
+<h1><span style="font-size:32px">Horizon Dashboard</span></h1>
+</div>
+</div>
+<div class="sl-block" data-block-type="image" style="width: 326.261780104712px; height: 108px; left: 741px; top: 700px;" data-block-id="f8f1b71c1fca1cace98bd69b52fc4c50"><div class="sl-block-content" style="z-index: 10;"><img src="deck/985855-cloud_practice_white.png" style="visibility: visible;" data-natural-width="577" data-natural-height="191"></div></div>
+<div class="sl-block" data-block-type="shape" style="width: 960px; height: 700px; left: 0px; top: 1px;" data-block-id="f06149fe560d9e99b3d97c0ca525c60d"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(255, 255, 255)" data-shape-stretch="true" style="z-index: 11;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 960 700"><rect width="960" height="700" class="shape-element" fill="rgb(255, 255, 255)"></rect></svg></div></div>
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 669px; left: 121px; top: 464px;" data-block-id="99d715af39b803950d0479b1f0680cc8"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; color: rgb(0, 0, 0);">
+<p style="text-align:left"><span style="font-size:16px">In the navigation pane, you will see your current project. Your project name will be different.</span></p>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 30.6149068322981px; height: 31px; left: 80px; top: 472px;" data-block-id="dbf2d854a74afee1f61f95076b4ffd68"><div class="sl-block-content" style="z-index: 14;"><img src="deck/997104-BlueIcon1.png" style="visibility: visible;" data-natural-width="159" data-natural-height="161"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 30.6149068322981px; height: 31px; left: 80px; top: 528px;" data-block-id="fa6e6b0730961ffaf9a23ad154decfb9"><div class="sl-block-content" style="z-index: 15;"><img src="deck/997107-BlueIcon2.png" style="visibility: visible;" data-natural-width="159" data-natural-height="161"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 30.6149068322981px; height: 31px; left: 80px; top: 582px;" data-block-id="4a294233c7213516a7adc3f798da8457"><div class="sl-block-content" style="z-index: 16;"><img src="deck/997111-BlueIcon3.png" style="visibility: visible;" data-natural-width="159" data-natural-height="161"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 30.6149068322981px; height: 31px; left: 80px; top: 632px;" data-block-id="d33c7018713d1c35ff312b06a93f74f1"><div class="sl-block-content" style="z-index: 17;"><img src="deck/997114-BlueIcon4.png" style="visibility: visible;" data-natural-width="159" data-natural-height="161"></div></div>
+<div class="sl-block" data-block-type="image" data-block-id="07d0d3a131187754f3b902238ec81201" style="min-width: 30px; min-height: 30px; width: 597.567567567568px; height: 402px; left: 181px; top: 55px;"><div class="sl-block-content" style="z-index: 18;"><img src="deck/997159-horizon_dash.png" style="visibility: visible;" data-natural-width="1210" data-natural-height="814"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 669px; left: 121px; top: 520px;" data-block-id="00ef2b18fbfc14c1937045903142d14e"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 19; color: rgb(0, 0, 0);">
+<p style="text-align:left"><span style="font-size:16px">The main pane provides a view of the resources currently used by the project.</span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 669px; left: 160px; top: 544px;" data-block-id="28e4c88430a8275d47ac76c28f460de1"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 20; color: rgb(102, 102, 102);">
+<p style="text-align:left"><em><span style="font-size:16px">As this is a new project, all resources should be idle and set to zero.</span></em></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 669px; left: 121px; top: 573px;" data-block-id="f5779284a62cbb265b42448039133d39"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 22; color: rgb(0, 0, 0);">
+<p style="text-align:left"><span style="font-size:16px">The Usage Summary provides a per-instance view of resources consumed by the project.</span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 669px; left: 160px; top: 598px;" data-block-id="ee15058dc72acac7a5b5cc3e15392ad1"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 23; color: rgb(102, 102, 102);">
+<p style="text-align:left"><em><span style="font-size:16px">Again, as this is a new project, the summary should be empty.</span></em></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 766px; left: 121px; top: 624px;" data-block-id="b9819feb61c61daa78aad03816aabea6"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 24; color: rgb(0, 0, 0);">
+<p style="text-align: left;"><span style="font-size:16px"><span style="text-align:left">In the navigation pane, select </span><strong>Network Topology</strong><span style="text-align:left">.</span></span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 669px; left: 160px; top: 648px;" data-block-id="102ae00e5022061416c0dc74a76904e5"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 25; color: rgb(102, 102, 102);">
+<p style="text-align:left"><em><span style="font-size:16px"><span style="color:rgb(128, 128, 128); text-align:left">Our next step will be to view the current network set up of our project</span>.</span></em></p>
+</div></div></section><section data-background-size="initial"><div class="sl-block" data-block-type="text" style="width: 798px; left: 83px; top: -35px; height: auto;" data-block-id="a9a0454776ea76d11a6370abccd6b0f2">
+    <div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 12; color: rgb(0, 30, 130);">
+<h1><span style="font-size:32px">Here's one we prepared earlier...</span></h1>
+</div>
+</div>
+<div class="sl-block" data-block-type="image" style="width: 326.261780104712px; height: 108px; left: 741px; top: 700px;" data-block-id="b601dff5df538fe9aca75458963fb70d"><div class="sl-block-content" style="z-index: 10;"><img src="deck/985855-cloud_practice_white.png" style="visibility: visible;" data-natural-width="577" data-natural-height="191"></div></div>
+<div class="sl-block" data-block-type="shape" style="width: 960px; height: 700px; left: 0px; top: 1px;" data-block-id="41efe0466c60b09669522bd61067d27f"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(255, 255, 255)" data-shape-stretch="true" style="z-index: 11;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 960 700"><rect width="960" height="700" class="shape-element" fill="rgb(255, 255, 255)"></rect></svg></div></div>
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 669px; left: 121px; top: 464px;" data-block-id="8b8eec22d1406828f4bc5ea3512e84ec"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; color: rgb(0, 0, 0);" dir="ui">
+<p style="text-align:left"><span style="font-size:16px"><span style="text-align:left">The blue vertical line represents the internet-facing public network of the project.</span></span></p>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 30.6149068322981px; height: 31px; left: 80px; top: 472px;" data-block-id="28526672d3001edb3abee0a06632616e"><div class="sl-block-content" style="z-index: 14;"><img src="deck/997104-BlueIcon1.png" style="visibility: visible;" data-natural-width="159" data-natural-height="161"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 30.6149068322981px; height: 31px; left: 80px; top: 528px;" data-block-id="09534469c35b7f1be0cd5747c425c045"><div class="sl-block-content" style="z-index: 15;"><img src="deck/997107-BlueIcon2.png" style="visibility: visible;" data-natural-width="159" data-natural-height="161"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 30.6149068322981px; height: 31px; left: 80px; top: 582px;" data-block-id="505d1f7a1ed332da0efcc72f4fb803fb"><div class="sl-block-content" style="z-index: 16;"><img src="deck/997111-BlueIcon3.png" style="visibility: visible;" data-natural-width="159" data-natural-height="161"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 30.6149068322981px; height: 31px; left: 80px; top: 632px;" data-block-id="e9d54ae89a4467d4e2142f9d7f3f2fa9"><div class="sl-block-content" style="z-index: 17;"><img src="deck/997114-BlueIcon4.png" style="visibility: visible;" data-natural-width="159" data-natural-height="161"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 598px; height: 365.783941605839px; left: 181px; top: 73px;" data-block-id="66fe9551d4975ec77887aad8f544e474"><div class="sl-block-content" style="z-index: 18;"><img src="deck/997224-network_topology_final.png" style="visibility: visible;" data-natural-width="1370" data-natural-height="838"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 822px; left: 121px; top: 520px;" data-block-id="35ae5b5e7231398dfec8026b5d521c97"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 19; color: rgb(0, 0, 0);">
+<p style="text-align:left"><span style="font-size:16px">The orange vertical line represents the internal private network. In the exercise, we will create <span style="text-align:left">the private network </span></span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 669px; left: 121px; top: 541px;" data-block-id="c2ec3a1ce69c0185a37c42e22c442d97"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 20; color: rgb(0, 0, 0);">
+<p style="text-align:left"><span style="font-size:16px"><span style="text-align:left">first as all the other components rely on it.</span></span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 828px; left: 121px; top: 573px;" data-block-id="8bddddcd4f00d57621d86ff34fcc6a3d"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 22; color: rgb(0, 0, 0);">
+<p style="text-align:left"><span style="font-size:16px">The box labelled Router represents the connection between the public and private networks. We will create the </span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 669px; left: 121px; top: 594px;" data-block-id="ef670e1b5142f753eb3ac2b25fe1bddc"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 23; color: rgb(0, 0, 0);">
+<p style="text-align:left"><span style="font-size:16px"><span style="text-align:left">router in this exercise.</span></span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 848px; left: 121px; top: 624px;" data-block-id="084c6b644689a0d9ddfe757e50f2166d"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 24; color: rgb(0, 0, 0);">
+<p style="text-align:left"><span style="font-size:16px">The boxes labelled Instance represent the web servers the serve up the web page for this exercise. We will create</span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 669px; left: 121px; top: 648px;" data-block-id="282d0b9fa2997d9facd071ee974a77ba"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 25; color: rgb(0, 0, 0);">
+<p style="text-align:left"><span style="font-size:16px"> these web servers in this exercise.</span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 669px; left: 160px; top: 490px;" data-block-id="a8fa4c624753e82aa8a6255e871bf483"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 26; color: rgb(102, 102, 102);">
+<p style="text-align:left"><em><span style="font-size:16px"><span style="color:rgb(128, 128, 128); text-align:left">Every project starts with a public network.</span></span></em></p>
+</div></div></section><section data-background-size="initial"><div class="sl-block" data-block-type="text" style="width: 798px; left: 48px; top: 140px; height: auto;" data-block-id="44753bcaabeb5fcc736ab9553ebc3e2a">
+    <div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 12;">
+<p style="text-align:left"><span style="font-size:48px">Now it's your turn!</span></p>
+</div>
+</div>
+<div class="sl-block" data-block-type="image" style="width: 326.261780104712px; height: 108px; left: 741px; top: 700px;" data-block-id="2351dc61c4ddc313f4d09e38a820e761"><div class="sl-block-content" style="z-index: 13;"><img src="deck/985855-cloud_practice_white.png" style="visibility: visible;" data-natural-width="577" data-natural-height="191"></div></div></section><section data-background-size="initial"><div class="sl-block" data-block-type="text" style="width: 798px; left: 83px; top: -35px; height: auto;" data-block-id="647131f79983b5cc9a30c7d249e55c4e">
+    <div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 12; color: rgb(0, 30, 130);">
+<h1><span style="font-size:32px">OpenStack Network View</span></h1>
+</div>
+</div>
+<div class="sl-block" data-block-type="image" style="width: 326.261780104712px; height: 108px; left: 741px; top: 700px;" data-block-id="fa5b887eefa4d8d53638f8b47b93280f"><div class="sl-block-content" style="z-index: 10;"><img src="deck/985855-cloud_practice_white.png" style="visibility: visible;" data-natural-width="577" data-natural-height="191"></div></div>
+<div class="sl-block" data-block-type="shape" style="width: 960px; height: 701px; left: 0px; top: 0px;" data-block-id="606a9550ac8b69cd921d01eb7f965197"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(255, 255, 255)" data-shape-stretch="true" style="z-index: 11;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 960 701"><rect width="960" height="701" class="shape-element" fill="rgb(255, 255, 255)"></rect></svg></div></div>
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 876px; left: 98px; top: 464px;" data-block-id="66e77df39659df0f7a9af6b0affca3b4"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; color: rgb(0, 0, 0);">
+<p style="text-align:left"><span style="font-size:16px">The only component we have in this view is the public network, denoted as the vertical blue line </span></p>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 30.6149068322981px; height: 31px; left: 59px; top: 472px;" data-block-id="832f1828eb75b1cac52b76e1845857db"><div class="sl-block-content" style="z-index: 14;"><img src="deck/997104-BlueIcon1.png" style="visibility: visible;" data-natural-width="159" data-natural-height="161"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 30.6149068322981px; height: 31px; left: 59px; top: 528px;" data-block-id="f66897025ade56ab18f11c545647d290"><div class="sl-block-content" style="z-index: 15;"><img src="deck/997107-BlueIcon2.png" style="visibility: visible;" data-natural-width="159" data-natural-height="161"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 30.6149068322981px; height: 31px; left: 59px; top: 582px;" data-block-id="2dceaa564e3310f92e25d6426ea51612"><div class="sl-block-content" style="z-index: 16;"><img src="deck/997111-BlueIcon3.png" style="visibility: visible;" data-natural-width="159" data-natural-height="161"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 598px; height: 381.051162790698px; left: 181px; top: 65.5px;" data-block-id="244d693fc6004b391895fe54afcfef96"><div class="sl-block-content" style="z-index: 18;"><img src="deck/997268-network_topology_empty.png" style="visibility: visible;" data-natural-width="1290" data-natural-height="822"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 669px; left: 100px; top: 520px;" data-block-id="087c8e796ae25b9ed46244cb256afe98"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 19; color: rgb(0, 0, 0);">
+<p style="text-align:left"><span style="font-size:16px">In the navigation pane, select <strong>Networks</strong>.</span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 669px; left: 100px; top: 484px;" data-block-id="8f9e20d1892d7855e2bb929449d4cd65"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 20; color: rgb(0, 0, 0);">
+<p style="text-align:left"><span style="font-size:16px"><span style="text-align:left">labelled “public- floating-601”.</span></span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 850px; left: 100px; top: 573px;" data-block-id="73e2b06cf6c78e205fb59343bf7401a9"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 22; color: rgb(0, 0, 0);">
+<p style="text-align:left"><span style="font-size:16px"><strong>NOTE</strong>: To change the size of the icons displayed in the Network Topology view, select either “Small” or “Normal”.</span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 669px; left: 100px; top: 594px;" data-block-id="7204a63e959e9152d2c765f75ab17ed9"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 23; color: rgb(0, 0, 0);">
+<p style="text-align:left"><span style="font-size:16px"><span style="text-align:left">This is optional, but may come in handy throughout the exercise.</span></span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 669px; left: 121px; top: 540px;" data-block-id="fa3454127acd46db591ce90327d04b6a"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 25; color: rgb(102, 102, 102);">
+<p style="text-align:left"><em><span style="font-size:16px">Our first goal is to add a private network.</span></em></p>
+</div></div></section><section data-background-size="initial"><div class="sl-block" data-block-type="text" style="width: 798px; left: 83px; top: -35px; height: auto;" data-block-id="fa6d646a8d0a3e3a674b0267103a2ba1">
+    <div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 12; color: rgb(0, 30, 130);">
+<h1><span style="font-size:32px">Create a Private Network</span></h1>
+</div>
+</div>
+<div class="sl-block" data-block-type="image" style="width: 326.261780104712px; height: 108px; left: 741px; top: 700px;" data-block-id="6e53469d828cc0fd90b9abcdfb8b6d4b"><div class="sl-block-content" style="z-index: 10;"><img src="deck/985855-cloud_practice_white.png" style="visibility: visible;" data-natural-width="577" data-natural-height="191"></div></div>
+<div class="sl-block" data-block-type="shape" style="width: 960px; height: 700px; left: 0px; top: 1px;" data-block-id="ce9a33e7398724d8a3e29bd42a0d6ce8"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(255, 255, 255)" data-shape-stretch="true" style="z-index: 11;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 960 700"><rect width="960" height="700" class="shape-element" fill="rgb(255, 255, 255)"></rect></svg></div></div>
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 669px; left: 121px; top: 509px;" data-block-id="1ab5c25bf6f9e921e3fbf9cfaf30521e"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; color: rgb(0, 0, 0);">
+<p style="text-align:left"><span style="font-size:16px">Currently the list is empty. To create a new <strong>private</strong> network, select <strong>+ Create Network</strong>.</span></p>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 30.6149068322981px; height: 31px; left: 80px; top: 517px;" data-block-id="4914460f6ee2afba68d83f85c7a23ae7"><div class="sl-block-content" style="z-index: 14;"><img src="deck/997104-BlueIcon1.png" style="visibility: visible;" data-natural-width="159" data-natural-height="161"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 598px; height: 365.114001530222px; left: 181px; top: 73.5px;" data-block-id="b22e0911f414423820950efe9d01ae78"><div class="sl-block-content" style="z-index: 18;"><img src="deck/997302-network_create.png" style="visibility: visible;" data-natural-width="1307" data-natural-height="798"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 669px; left: 181px; top: 447px;" data-block-id="f103e85cf88a170bc26d6563697f5b91"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 19; color: rgb(0, 0, 0);">
+<p style="text-align:left"><span style="font-size:16px">The Networks view provides a list of private networks associated with the project</span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 669px; left: 138px; top: 533px;" data-block-id="9ef8a04466b26a00def6f04e7ff5a96e"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 20; color: rgb(102, 102, 102);">
+<p style="text-align:left"><em><span style="font-size:16px">A pop-up window will appear</span></em></p>
+</div></div></section><section data-background-size="initial"><div class="sl-block" data-block-type="text" style="width: 798px; left: 83px; top: -35px; height: auto;" data-block-id="6f99658348f56228a2b620cc76d5929f">
+    <div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 12; color: rgb(0, 30, 130);">
+<h1><span style="font-size:32px">Create a Private Network. Step One.</span></h1>
+</div>
+</div>
+<div class="sl-block" data-block-type="image" style="width: 326.261780104712px; height: 108px; left: 741px; top: 700px;" data-block-id="150c5615e80cd601b000b5ca8000a57a"><div class="sl-block-content" style="z-index: 10;"><img src="deck/985855-cloud_practice_white.png" style="visibility: visible;" data-natural-width="577" data-natural-height="191"></div></div>
+<div class="sl-block" data-block-type="shape" style="width: 960px; height: 700px; left: 0px; top: 1px;" data-block-id="bf8220cbb322894ca8323431a325c06d"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(255, 255, 255)" data-shape-stretch="true" style="z-index: 11;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 960 700"><rect width="960" height="700" class="shape-element" fill="rgb(255, 255, 255)"></rect></svg></div></div>
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 720px; left: 121px; top: 507px;" data-block-id="2cc03538406d62e576082728954af94b"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; color: rgb(0, 0, 0);">
+<p style="text-align:left"><span style="font-size:16px">In the “Network Name” text box, provide a name for the Private Network. A good choice is “internal”.</span></p>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 30.6149068322981px; height: 31px; left: 80px; top: 515px;" data-block-id="a8e2377a0a2067ce8f190e8a810553f5"><div class="sl-block-content" style="z-index: 14;"><img src="deck/997104-BlueIcon1.png" style="visibility: visible;" data-natural-width="159" data-natural-height="161"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 30.6149068322981px; height: 31px; left: 80px; top: 571px;" data-block-id="7fbb587378bc3e6da5161bf998bf1d59"><div class="sl-block-content" style="z-index: 15;"><img src="deck/997107-BlueIcon2.png" style="visibility: visible;" data-natural-width="159" data-natural-height="161"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 598px; height: 366.292343387471px; left: 181px; top: 73px;" data-block-id="db9ed8df1211a12390d84f24269585ab"><div class="sl-block-content" style="z-index: 18;"><img src="deck/997326-network_create_fields.png" style="visibility: visible;" data-natural-width="1293" data-natural-height="792"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 669px; left: 121px; top: 563px;" data-block-id="d01c3a20e7380653b4a10fd225d0839d"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 19; color: rgb(0, 0, 0);">
+<p style="text-align:left"><span style="font-size:16px">Select the Subnet tab to move to the next step.</span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 669px; left: 181px; top: 439px;" data-block-id="cb57cd0d81656443ce43622a770b3ce3"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 25; color: rgb(102, 102, 102);">
+<p style="text-align:left"><span style="font-size:16px">To create a new network, step through the Create Network wizard as shown above.</span></p>
+</div></div></section><section data-background-size="initial"><div class="sl-block" data-block-type="text" style="width: 798px; left: 83px; top: -35px; height: auto;" data-block-id="1b4ee0ddc51fd2d2f6f74661340a3da1">
+    <div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 12; color: rgb(0, 30, 130);">
+<h1><span style="font-size:32px">Create a Private Network Step Two.</span></h1>
+</div>
+</div>
+<div class="sl-block" data-block-type="image" style="width: 326.261780104712px; height: 108px; left: 741px; top: 700px;" data-block-id="85ce92b463b9390faed158330a4dad5d"><div class="sl-block-content" style="z-index: 10;"><img src="deck/985855-cloud_practice_white.png" style="visibility: visible;" data-natural-width="577" data-natural-height="191"></div></div>
+<div class="sl-block" data-block-type="shape" style="width: 960px; height: 700px; left: 0px; top: 1px;" data-block-id="e2701b5106d20abcdc110245c7c4d271"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(255, 255, 255)" data-shape-stretch="true" style="z-index: 11;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 960 700"><rect width="960" height="700" class="shape-element" fill="rgb(255, 255, 255)"></rect></svg></div></div>
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 669px; left: 121px; top: 464px;" data-block-id="cbd8a13c4e74425f84f7c069b445c3b8"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; color: rgb(0, 0, 0);">
+<p style="text-align:left"><span style="font-size:16px">In the “Subnet Name” text box, provide a name for the subnet. A good choice is <strong>subnet-01</strong>.</span></p>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 30.6149068322981px; height: 31px; left: 80px; top: 472px;" data-block-id="f673d10f5e2d8402b771ba51eecd08e2"><div class="sl-block-content" style="z-index: 14;"><img src="deck/997104-BlueIcon1.png" style="visibility: visible;" data-natural-width="159" data-natural-height="161"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 30.6149068322981px; height: 31px; left: 80px; top: 528px;" data-block-id="6240f49604d01ed9e3015bacbbc9db24"><div class="sl-block-content" style="z-index: 15;"><img src="deck/997107-BlueIcon2.png" style="visibility: visible;" data-natural-width="159" data-natural-height="161"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 30.6149068322981px; height: 31px; left: 80px; top: 582px;" data-block-id="b6496e60f2b14bb8aa0d063ed6aba5dc"><div class="sl-block-content" style="z-index: 16;"><img src="deck/997111-BlueIcon3.png" style="visibility: visible;" data-natural-width="159" data-natural-height="161"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 598px; height: 366.410054988217px; left: 181px; top: 73px;" data-block-id="f204cb1e8c0ea5cb5625559fe0eb16ea"><div class="sl-block-content" style="z-index: 18;"><img src="deck/997344-network_create_fields_subnet.png" style="visibility: visible;" data-natural-width="1273" data-natural-height="780"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 772px; left: 121px; top: 520px;" data-block-id="fb35e5827f7c0cd14c9e0407038b32e8"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 19; color: rgb(0, 0, 0);">
+<p style="text-align:left"><span style="font-size:16px"><span style="text-align:left">In the “Network address” text box, provide the network address. A good choice is </span><strong>“192.168.55.0/24”</strong><span style="text-align:left">.</span></span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 669px; left: 160px; top: 544px;" data-block-id="da8f12f4f38f9d76158564c4343a34c9"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 20; color: rgb(102, 102, 102);">
+<p style="text-align:left"><span style="font-size:16px"><em>All other fields on this tab can be left to their default values.</em></span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 669px; left: 121px; top: 573px;" data-block-id="c4da9fc22e21c68888a346c8aa769b3c"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 22; color: rgb(0, 0, 0);">
+<p style="text-align:left"><span style="font-size:16px">Select the “Subnet detail” tab to move to the next step.</span></p>
+</div></div></section><section data-background-size="initial"><div class="sl-block" data-block-type="text" style="width: 798px; left: 83px; top: -35px; height: auto;" data-block-id="568cf8cb195e321e01fa268567e07d88">
+    <div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 12; color: rgb(0, 30, 130);">
+<h1><span style="font-size:32px">Create a Private Network. Step Three.</span></h1>
+</div>
+</div>
+<div class="sl-block" data-block-type="image" style="width: 326.261780104712px; height: 108px; left: 741px; top: 700px;" data-block-id="ec3b67aa9eb6365b3dfdb7282326ac85"><div class="sl-block-content" style="z-index: 10;"><img src="deck/985855-cloud_practice_white.png" style="visibility: visible;" data-natural-width="577" data-natural-height="191"></div></div>
+<div class="sl-block" data-block-type="shape" style="width: 960px; height: 700px; left: 0px; top: 1px;" data-block-id="cfa954d2102c2616f253353a86ec615e"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(255, 255, 255)" data-shape-stretch="true" style="z-index: 11;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 960 700"><rect width="960" height="700" class="shape-element" fill="rgb(255, 255, 255)"></rect></svg></div></div>
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 669px; left: 121px; top: 464px;" data-block-id="1bf9f3cb327fe75e5c836a6ba435df89"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; color: rgb(0, 0, 0);">
+<p style="text-align:left"><span style="font-size:16px">In the DNS Name Servers text box, enter “8.8.8.8”.</span></p>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 30.6149068322981px; height: 31px; left: 80px; top: 472px;" data-block-id="aad4589f8425a0020d6c0020494e8094"><div class="sl-block-content" style="z-index: 14;"><img src="deck/997104-BlueIcon1.png" style="visibility: visible;" data-natural-width="159" data-natural-height="161"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 30.6149068322981px; height: 31px; left: 80px; top: 528px;" data-block-id="ebda1644382921641df6899e31934b05"><div class="sl-block-content" style="z-index: 15;"><img src="deck/997107-BlueIcon2.png" style="visibility: visible;" data-natural-width="159" data-natural-height="161"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 598px; height: 364.814868804665px; left: 181px; top: 73.5px;" data-block-id="b1c8b45f1d8b222dce915477e43de1be"><div class="sl-block-content" style="z-index: 18;"><img src="deck/997357-network_create_fields_subnet_details.png" style="visibility: visible;" data-natural-width="1372" data-natural-height="837"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 669px; left: 121px; top: 520px;" data-block-id="ea6f00d3fc4453f49cca40e653d29f00"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 19; color: rgb(0, 0, 0);">
+<p style="text-align:left"><span style="font-size:16px">Once done, select <strong>Create</strong> to create the Private Network.</span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 669px; left: 148px; top: 540px;" data-block-id="da19d1f251091862696b1ec56a12f3fc"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 20; color: rgb(102, 102, 102);">
+<p style="text-align:left"><em><span style="font-size:16px">You will be returned to the Networks view.</span></em></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 669px; left: 148px; top: 488px;" data-block-id="47c1cfec2f0242f7b65800b52c68eff1"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 25; color: rgb(102, 102, 102);">
+<p style="text-align:left"><em><span style="font-size:16px">This address points to Google servers and makes it possible to connect to other websites.</span></em></p>
+</div></div></section><section data-background-size="initial"><div class="sl-block" data-block-type="text" style="width: 798px; left: 83px; top: -35px; height: auto;" data-block-id="645367ee29fc0a06451fadcee67bb4cb">
+    <div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 12; color: rgb(0, 30, 130);">
+<h1><span style="font-size:32px">New Private Network.</span></h1>
+</div>
+</div>
+<div class="sl-block" data-block-type="image" style="width: 326.261780104712px; height: 108px; left: 741px; top: 700px;" data-block-id="d2f509a44a187dbea35c3e92db1b5ccc"><div class="sl-block-content" style="z-index: 10;"><img src="deck/985855-cloud_practice_white.png" style="visibility: visible;" data-natural-width="577" data-natural-height="191"></div></div>
+<div class="sl-block" data-block-type="shape" style="width: 960px; height: 700px; left: 0px; top: 1px;" data-block-id="ea92d0e4132984e65f106bbabd9d3435"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(255, 255, 255)" data-shape-stretch="true" style="z-index: 11;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 960 700"><rect width="960" height="700" class="shape-element" fill="rgb(255, 255, 255)"></rect></svg></div></div>
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 760px; left: 121px; top: 464px;" data-block-id="6b7fd6e87921df75503482810fe03220"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; color: rgb(0, 0, 0);">
+<p style="text-align:left"><span style="font-size:16px">The name should be “internal”, the associated Subnet should match that IP address range you provided.</span></p>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 30.6149068322981px; height: 31px; left: 80px; top: 472px;" data-block-id="0e574ac1c674893090f09b28aac40923"><div class="sl-block-content" style="z-index: 14;"><img src="deck/997104-BlueIcon1.png" style="visibility: visible;" data-natural-width="159" data-natural-height="161"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 30.6149068322981px; height: 31px; left: 80px; top: 528px;" data-block-id="9717d186590ba66a70b108a772c07fc9"><div class="sl-block-content" style="z-index: 15;"><img src="deck/997107-BlueIcon2.png" style="visibility: visible;" data-natural-width="159" data-natural-height="161"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 598px; height: 367.824695121951px; left: 181px; top: 72px;" data-block-id="0f456b855a70608890a09bbedd6e1633"><div class="sl-block-content" style="z-index: 18;"><img src="deck/997381-network_create_done.png" style="visibility: visible;" data-natural-width="1312" data-natural-height="807"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 669px; left: 121px; top: 520px;" data-block-id="6b94fd7bf23584f700b6bab35f4c9bbd"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 19; color: rgb(0, 0, 0);">
+<p style="text-align:left"><span style="font-size:16px">To view the private network, select <strong>Network Topology</strong>.</span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 669px; left: 160px; top: 484px;" data-block-id="aea3c075e6982851b9c63aea1bb6c209"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 20; color: rgb(102, 102, 102);">
+<p style="text-align:left"><em><span style="font-size:16px"><span style="color:rgb(128, 128, 128); text-align:left">The Status should be </span><strong>ACTIVE</strong></span></em></p>
+</div></div></section><section data-background-size="initial"><div class="sl-block" data-block-type="text" style="width: 798px; left: 83px; top: -35px; height: auto;" data-block-id="54d8fb7eb9e723aa262b982a72f82202">
+    <div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 12; color: rgb(0, 30, 130);">
+<h1><span style="font-size:32px">Updated Network Topology</span></h1>
+</div>
+</div>
+<div class="sl-block" data-block-type="image" style="width: 326.261780104712px; height: 108px; left: 741px; top: 700px;" data-block-id="023ff28382d13f842d41be708f3c8ee3"><div class="sl-block-content" style="z-index: 10;"><img src="deck/985855-cloud_practice_white.png" style="visibility: visible;" data-natural-width="577" data-natural-height="191"></div></div>
+<div class="sl-block" data-block-type="shape" style="width: 960px; height: 700px; left: 0px; top: 1px;" data-block-id="d67578a9c4825c26f58471e4113bd0fd"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(255, 255, 255)" data-shape-stretch="true" style="z-index: 11;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 960 700"><rect width="960" height="700" class="shape-element" fill="rgb(255, 255, 255)"></rect></svg></div></div>
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 669px; left: 121px; top: 464px;" data-block-id="8a9fb5316f97bf0088b4bb5bfbee77b0"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; color: rgb(0, 0, 0);">
+<p style="text-align:left"><span style="font-size:16px">The private network is depicted as a vertical orange line.</span></p>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 30.6149068322981px; height: 31px; left: 80px; top: 472px;" data-block-id="345873acbb13a8dd80281263580d3b01"><div class="sl-block-content" style="z-index: 14;"><img src="deck/997104-BlueIcon1.png" style="visibility: visible;" data-natural-width="159" data-natural-height="161"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 30.6149068322981px; height: 31px; left: 80px; top: 528px;" data-block-id="bdb193bb2bbe626a18a0f87d726df4e1"><div class="sl-block-content" style="z-index: 15;"><img src="deck/997107-BlueIcon2.png" style="visibility: visible;" data-natural-width="159" data-natural-height="161"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 598px; height: 366.575851393189px; left: 181px; top: 72.5px;" data-block-id="4c1444af32973d01edd2f436e9323ec9"><div class="sl-block-content" style="z-index: 18;"><img src="deck/997525-network_topology_private.png" style="visibility: visible;" data-natural-width="1292" data-natural-height="792"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 669px; left: 121px; top: 520px;" data-block-id="276a7982b2ddcd608a53f12d180d0c44"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 19; color: rgb(0, 0, 0);">
+<p style="text-align:left"><span style="font-size:16px">Select <strong>Routers</strong> from the navigation pane.</span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 669px; left: 154px; top: 544px;" data-block-id="a1a1614173cf4205da6b761419aa5f81"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 20; color: rgb(102, 102, 102);">
+<p style="text-align:left"><em><span style="font-size:16px">We will now create a router to connect the public network to the private network.</span></em></p>
+</div></div></section><section data-background-size="initial"><div class="sl-block" data-block-type="text" style="width: 798px; left: 83px; top: -35px; height: auto;" data-block-id="dfe19bd31eedba9314d51774574e1f74">
+    <div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 12; color: rgb(0, 30, 130);">
+<h1><span style="font-size:32px">Configure a Router.</span></h1>
+</div>
+</div>
+<div class="sl-block" data-block-type="image" style="width: 326.261780104712px; height: 108px; left: 741px; top: 700px;" data-block-id="b23c3fe9714599d20d19e7f41b8f74bb"><div class="sl-block-content" style="z-index: 10;"><img src="deck/985855-cloud_practice_white.png" style="visibility: visible;" data-natural-width="577" data-natural-height="191"></div></div>
+<div class="sl-block" data-block-type="shape" style="width: 960px; height: 700px; left: 0px; top: 1px;" data-block-id="b96491a8c4b1e2ff318681341cdb3cbd"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(255, 255, 255)" data-shape-stretch="true" style="z-index: 11;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 960 700"><rect width="960" height="700" class="shape-element" fill="rgb(255, 255, 255)"></rect></svg></div></div>
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 669px; left: 121px; top: 494px;" data-block-id="6ae980903f36922ea753375c633acbe3"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; color: rgb(0, 0, 0);">
+<p style="text-align:left"><span style="font-size:16px">The main view lists the routers created for this project. The list should be empty.</span></p>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 30.6149068322981px; height: 31px; left: 80px; top: 502px;" data-block-id="03c64fdbb3c32b430ceb0aec88803e9b"><div class="sl-block-content" style="z-index: 14;"><img src="deck/997104-BlueIcon1.png" style="visibility: visible;" data-natural-width="159" data-natural-height="161"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 30.6149068322981px; height: 31px; left: 80px; top: 558px;" data-block-id="cba984121a57786b128ffdbb29e2a542"><div class="sl-block-content" style="z-index: 15;"><img src="deck/997107-BlueIcon2.png" style="visibility: visible;" data-natural-width="159" data-natural-height="161"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 598px; height: 366.33037037037px; left: 181px; top: 73px;" data-block-id="ad8c0c4b2094059f3ae3f7549ae39092"><div class="sl-block-content" style="z-index: 18;"><img src="deck/997537-router_create.png" style="visibility: visible;" data-natural-width="1350" data-natural-height="827"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 669px; left: 121px; top: 550px;" data-block-id="54567a658929a8f82bcf353455b3782e"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 19; color: rgb(0, 0, 0);">
+<p style="text-align:left"><span style="font-size:16px">To create a new router, select <strong>+ Create Router</strong></span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 669px; left: 160px; top: 574px;" data-block-id="549b0555d84ae2cb3d046454ad645044"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 20; color: rgb(102, 102, 102);">
+<p style="text-align:left"><span style="font-size:16px"><em>A pop-up window will appear.</em></span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 669px; left: 181px; top: 445px;" data-block-id="0532ed77ad811193650d184b08ce2c54"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 25; color: rgb(0, 0, 0);">
+<p style="text-align:left"><span style="font-size:16px">The router will connect the public network to the private network.</span></p>
+</div></div></section><section data-background-size="initial"><div class="sl-block" data-block-type="text" style="width: 798px; left: 83px; top: -35px; height: auto;" data-block-id="9f08030dcae928719192e64fa26e79d6">
+    <div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 12; color: rgb(0, 30, 130);">
+<h1><span style="font-size:32px">Configure a Router. Step One.</span></h1>
+</div>
+</div>
+<div class="sl-block" data-block-type="image" style="width: 326.261780104712px; height: 108px; left: 741px; top: 700px;" data-block-id="df89a84bc4250817fc314a4546a134bf"><div class="sl-block-content" style="z-index: 10;"><img src="deck/985855-cloud_practice_white.png" style="visibility: visible;" data-natural-width="577" data-natural-height="191"></div></div>
+<div class="sl-block" data-block-type="shape" style="width: 960px; height: 700px; left: 0px; top: 1px;" data-block-id="196eed05c0ba6d966f2616fce43a266f"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(255, 255, 255)" data-shape-stretch="true" style="z-index: 11;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 960 700"><rect width="960" height="700" class="shape-element" fill="rgb(255, 255, 255)"></rect></svg></div></div>
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 669px; left: 121px; top: 494px;" data-block-id="44a6c8ad74e987b345b121980246d034"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; color: rgb(0, 0, 0);">
+<p style="text-align:left"><span style="font-size:16px">In the Router Name field, type a name for your router. A good choice is “router-01".</span></p>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 30.6149068322981px; height: 31px; left: 80px; top: 502px;" data-block-id="14f4048fd89e34c83bcceb9429cf085c"><div class="sl-block-content" style="z-index: 14;"><img src="deck/997104-BlueIcon1.png" style="visibility: visible;" data-natural-width="159" data-natural-height="161"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 30.6149068322981px; height: 31px; left: 80px; top: 558px;" data-block-id="28bb5842af3ade2eb95989f7a06d7f7d"><div class="sl-block-content" style="z-index: 15;"><img src="deck/997107-BlueIcon2.png" style="visibility: visible;" data-natural-width="159" data-natural-height="161"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 598px; height: 365.54714064915px; left: 181px; top: 73px;" data-block-id="01232f5756e34e1ab5cbc982a7007fee"><div class="sl-block-content" style="z-index: 18;"><img src="deck/997548-router_create_fields.png" style="visibility: visible;" data-natural-width="1294" data-natural-height="791"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 669px; left: 121px; top: 550px;" data-block-id="4f47bbe30305447ee9d17e7e50d6e3ff"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 19; color: rgb(0, 0, 0);">
+<p style="text-align:left"><span style="font-size:16px">Once you have typed the name, select <strong>Create Router</strong>.</span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 669px; left: 160px; top: 574px;" data-block-id="d69d8f031b8da34ce150d82d5011261d"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 20; color: rgb(102, 102, 102);">
+<p style="text-align:left"><span style="font-size:16px"><em>You will be returned to the Routers view.</em></span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 669px; left: 181px; top: 445px;" data-block-id="d4d08241ffd7d3d37afb8afbc392fc03"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 25; color: rgb(0, 0, 0);">
+<p style="text-align:left"><span style="font-size:16px">Creating a new router is simple – give it a name.</span></p>
+</div></div></section><section data-background-size="initial"><div class="sl-block" data-block-type="text" style="width: 798px; left: 83px; top: -35px; height: auto;" data-block-id="1c59a96d2b52a5022d2fc73ee0591c50">
+    <div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 12; color: rgb(0, 30, 130);">
+<h1><span style="font-size:32px">Configure a Router. Step Two.</span></h1>
+</div>
+</div>
+<div class="sl-block" data-block-type="image" style="width: 326.261780104712px; height: 108px; left: 741px; top: 700px;" data-block-id="ff322bfe5d9653a2a326f086dee91187"><div class="sl-block-content" style="z-index: 10;"><img src="deck/985855-cloud_practice_white.png" style="visibility: visible;" data-natural-width="577" data-natural-height="191"></div></div>
+<div class="sl-block" data-block-type="shape" style="width: 960px; height: 700px; left: 0px; top: 1px;" data-block-id="ed754c3c4db5728a64216e910024ea9a"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(255, 255, 255)" data-shape-stretch="true" style="z-index: 11;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 960 700"><rect width="960" height="700" class="shape-element" fill="rgb(255, 255, 255)"></rect></svg></div></div>
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 669px; left: 121px; top: 494px;" data-block-id="519143747856e1258546289bfddd8d7a"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; color: rgb(0, 0, 0);">
+<p style="text-align:left"><span style="font-size:16px">Once completed, a new router entry will appear in the Routers list.</span></p>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 30.6149068322981px; height: 31px; left: 80px; top: 502px;" data-block-id="3ebda0be7a584ed45edb0286a635cc22"><div class="sl-block-content" style="z-index: 14;"><img src="deck/997104-BlueIcon1.png" style="visibility: visible;" data-natural-width="159" data-natural-height="161"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 30.6149068322981px; height: 31px; left: 80px; top: 558px;" data-block-id="ddaf909952f4753c91d69412e17411ff"><div class="sl-block-content" style="z-index: 15;"><img src="deck/997107-BlueIcon2.png" style="visibility: visible;" data-natural-width="159" data-natural-height="161"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 598px; height: 367.098039215686px; left: 181px; top: 72.5px;" data-block-id="ed673247c6099809d2b8c05f19555ad1"><div class="sl-block-content" style="z-index: 16;"><img src="deck/997850-router_create_done.png" style="visibility: visible;" data-natural-width="1326" data-natural-height="814"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 669px; left: 121px; top: 551px;" data-block-id="24fe8c5c998e8d017ff93f37fe9d4f18"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 17; color: rgb(0, 0, 0);">
+<p style="text-align:left"><span style="font-size:16px">The next step is to connect your new router to the public network. Select <strong>Set Gateway</strong>.</span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 669px; left: 160px; top: 574px;" data-block-id="214a4cc47849927ce4cccb58311b6ab9"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 18; color: rgb(102, 102, 102);">
+<p style="text-align:left"><span style="font-size:16px"><em>A pop-up window will appear.</em></span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 669px; left: 181px; top: 445px;" data-block-id="c8546c4f0c643aac504476b8201f6b0b"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 20; color: rgb(0, 0, 0);">
+<p style="text-align:left"><span style="font-size:16px">The router will connect the public network to the private network.</span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 669px; left: 160px; top: 514px;" data-block-id="a58803a89f441dff7f9130bbc943dd77"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 21; color: rgb(102, 102, 102);">
+<p style="text-align:left"><span style="font-size:16px"><em>The name should be “router-01”. The Status should be “ACTIVE".</em></span></p>
+</div></div></section><section data-background-size="initial"><div class="sl-block" data-block-type="text" style="width: 798px; left: 83px; top: -35px; height: auto;" data-block-id="17ca1849c1a70a4943bd9bd8990d00be">
+    <div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 12; color: rgb(0, 30, 130);">
+<h1><span style="font-size:32px">Configure a Router. Step Three.</span></h1>
+</div>
+</div>
+<div class="sl-block" data-block-type="image" style="width: 326.261780104712px; height: 108px; left: 741px; top: 700px;" data-block-id="4afe3ad35e66423cbe78ce3fb8f7781f"><div class="sl-block-content" style="z-index: 10;"><img src="deck/985855-cloud_practice_white.png" style="visibility: visible;" data-natural-width="577" data-natural-height="191"></div></div>
+<div class="sl-block" data-block-type="shape" style="width: 960px; height: 700px; left: 0px; top: 1px;" data-block-id="09dc4719be2556044dbcb44449967f7b"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(255, 255, 255)" data-shape-stretch="true" style="z-index: 11;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 960 700"><rect width="960" height="700" class="shape-element" fill="rgb(255, 255, 255)"></rect></svg></div></div>
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 669px; left: 121px; top: 494px;" data-block-id="1abe09b394dfa3be0d5d83fe226f778b"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; color: rgb(0, 0, 0);">
+<p style="text-align:left"><span style="font-size:16px">In the External Network drop-down box, select the public network “public-floating-601”</span></p>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 30.6149068322981px; height: 31px; left: 80px; top: 502px;" data-block-id="518f671f7c139e118d7b27543e623372"><div class="sl-block-content" style="z-index: 14;"><img src="deck/997104-BlueIcon1.png" style="visibility: visible;" data-natural-width="159" data-natural-height="161"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 30.6149068322981px; height: 31px; left: 80px; top: 558px;" data-block-id="cf8f428d531ccb81f4652f59af346670"><div class="sl-block-content" style="z-index: 15;"><img src="deck/997107-BlueIcon2.png" style="visibility: visible;" data-natural-width="159" data-natural-height="161"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 598px; height: 364.549162418063px; left: 181px; top: 73.5px;" data-block-id="cf099592d74fec2650265d9c031ad303"><div class="sl-block-content" style="z-index: 18;"><img src="deck/997875-router_gateway.png" style="visibility: visible;" data-natural-width="1373" data-natural-height="837"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 669px; left: 121px; top: 550px;" data-block-id="ca268db55b2c0048d3fffd111866266a"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 19; color: rgb(0, 0, 0);">
+<p style="text-align:left"><span style="font-size:16px">Once you selected the public network, select <strong>Set Gateway</strong> to set the gateway</span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 669px; left: 157px; top: 574px;" data-block-id="7a8f7f1f744c7ef48a596c0060f01cdf"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 20; color: rgb(102, 102, 102);">
+<p style="text-align:left"><span style="font-size:16px"><em>You will be returned to the Routers view.</em></span></p>
+</div></div></section><section data-background-size="initial"><div class="sl-block" data-block-type="text" style="width: 798px; left: 83px; top: -35px; height: auto;" data-block-id="66f0bfcbf2d0e0e53e252a08b307e5d9">
+    <div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 12; color: rgb(0, 30, 130);">
+<h1><span style="font-size:32px">Configure a Router. Step Four.</span></h1>
+</div>
+</div>
+<div class="sl-block" data-block-type="image" style="width: 326.261780104712px; height: 108px; left: 741px; top: 700px;" data-block-id="f8125145daf2b38e8f39a0ef056feafe"><div class="sl-block-content" style="z-index: 10;"><img src="deck/985855-cloud_practice_white.png" style="visibility: visible;" data-natural-width="577" data-natural-height="191"></div></div>
+<div class="sl-block" data-block-type="shape" style="width: 960px; height: 700px; left: 0px; top: 1px;" data-block-id="a72b06387dcf2c9d32704ab27dd4597d"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(255, 255, 255)" data-shape-stretch="true" style="z-index: 11;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 960 700"><rect width="960" height="700" class="shape-element" fill="rgb(255, 255, 255)"></rect></svg></div></div>
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 822px; left: 121px; top: 494px;" data-block-id="e1ddd0e653f339aa2b101740115d7105"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; color: rgb(0, 0, 0);">
+<p style="text-align:left"><span style="font-size:16px">Once completed, the router entry will be updated so that the External Network field will point to the public network.</span></p>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 30.6149068322981px; height: 31px; left: 80px; top: 502px;" data-block-id="4205f949c32ca1bffe32334ce818fef7"><div class="sl-block-content" style="z-index: 14;"><img src="deck/997104-BlueIcon1.png" style="visibility: visible;" data-natural-width="159" data-natural-height="161"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 30.6149068322981px; height: 31px; left: 80px; top: 558px;" data-block-id="63851f99eba2a67804d547ca5bdcb119"><div class="sl-block-content" style="z-index: 15;"><img src="deck/997107-BlueIcon2.png" style="visibility: visible;" data-natural-width="159" data-natural-height="161"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 598px; height: 364.14263322884px; left: 181px; top: 74px;" data-block-id="3325da4f1d8e7377490bc2230904f552"><div class="sl-block-content" style="z-index: 18;"><img src="deck/997893-router_with_gateway.png" style="visibility: visible;" data-natural-width="1276" data-natural-height="777"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 669px; left: 121px; top: 550px;" data-block-id="dc9cd6c511eb755e3590b82f7fe2cbf7"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 19; color: rgb(0, 0, 0);">
+<p style="text-align:left"><span style="font-size:16px">To view the router, select <strong>Network Topology</strong>.</span></p>
+</div></div></section><section data-background-size="initial"><div class="sl-block" data-block-type="text" style="width: 798px; left: 83px; top: -35px; height: auto;" data-block-id="23d62772ee76c59d448baca99172bcfc">
+    <div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 12; color: rgb(0, 30, 130);">
+<h1><span style="font-size:32px">Configure a Router. Step 5.</span></h1>
+</div>
+</div>
+<div class="sl-block" data-block-type="image" style="width: 326.261780104712px; height: 108px; left: 741px; top: 700px;" data-block-id="b53041f3c34b20d20ac84f1a9195e82f"><div class="sl-block-content" style="z-index: 10;"><img src="deck/985855-cloud_practice_white.png" style="visibility: visible;" data-natural-width="577" data-natural-height="191"></div></div>
+<div class="sl-block" data-block-type="shape" style="width: 960px; height: 700px; left: 0px; top: 1px;" data-block-id="c597ed59bef295f0111ad809e1e2b83c"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(255, 255, 255)" data-shape-stretch="true" style="z-index: 11;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 960 700"><rect width="960" height="700" class="shape-element" fill="rgb(255, 255, 255)"></rect></svg></div></div>
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 802px; left: 121px; top: 494px;" data-block-id="2788f2a76996a441c8a5e9be31d3e401"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; color: rgb(0, 0, 0);">
+<p style="text-align:left"><span style="font-size:16px">The router is now connected to the public network. To view more information about the router, place your mouse </span></p>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 30.6149068322981px; height: 31px; left: 80px; top: 502px;" data-block-id="eb0585d43c74f2bdd73d76468e038024"><div class="sl-block-content" style="z-index: 14;"><img src="deck/997104-BlueIcon1.png" style="visibility: visible;" data-natural-width="159" data-natural-height="161"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 598px; height: 365.722772277228px; left: 181px; top: 73px;" data-block-id="00d469998bd8a2a586eca8b3279035ac"><div class="sl-block-content" style="z-index: 18;"><img src="deck/997894-router_connected.png" style="visibility: visible;" data-natural-width="1313" data-natural-height="803"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 669px; left: 121px; top: 514px;" data-block-id="0c13f0808d7e830f6b17d4bd57d87bda"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 19; color: rgb(0, 0, 0);">
+<p style="text-align:left"><span style="font-size:16px"><span style="text-align:left">pointer over the Router icon.</span></span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 669px; left: 148px; top: 541px;" data-block-id="4158afd2aebe5b52f96e634116907a38"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 20; color: rgb(102, 102, 102);">
+<p style="text-align:left"><em><span style="font-size:16px">A new window with details about the Router will appear.</span></em></p>
+</div></div></section><section data-background-size="initial"><div class="sl-block" data-block-type="text" style="width: 798px; left: 83px; top: -35px; height: auto;" data-block-id="49071f5fa146563b8ec65f2521c8ae2f">
+    <div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 12; color: rgb(0, 30, 130);">
+<h1><span style="font-size:32px">Configure a Router. Step Six.</span></h1>
+</div>
+</div>
+<div class="sl-block" data-block-type="image" style="width: 326.261780104712px; height: 108px; left: 741px; top: 700px;" data-block-id="e601b4271f8a484aaf7160875f485094"><div class="sl-block-content" style="z-index: 10;"><img src="deck/985855-cloud_practice_white.png" style="visibility: visible;" data-natural-width="577" data-natural-height="191"></div></div>
+<div class="sl-block" data-block-type="shape" style="width: 960px; height: 700px; left: 0px; top: 1px;" data-block-id="45a2ec2411c808d6fcff91279c4f10e4"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(255, 255, 255)" data-shape-stretch="true" style="z-index: 11;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 960 700"><rect width="960" height="700" class="shape-element" fill="rgb(255, 255, 255)"></rect></svg></div></div>
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 669px; left: 121px; top: 494px;" data-block-id="fd66c7e1e170b6223a9d8da905dc5a8c"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; color: rgb(0, 0, 0);">
+<p style="text-align:left"><span style="font-size:16px">To connect the private network, we will create a new Inteface. Select <strong>view router details</strong>.</span></p>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 30.6149068322981px; height: 31px; left: 80px; top: 502px;" data-block-id="9117a8da9c64098c3220601152396965"><div class="sl-block-content" style="z-index: 14;"><img src="deck/997104-BlueIcon1.png" style="visibility: visible;" data-natural-width="159" data-natural-height="161"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 598px; height: 362.729166666667px; left: 181px; top: 74.5px;" data-block-id="f218ff423947ea1ba7f4b0dbfdd2127c"><div class="sl-block-content" style="z-index: 18;"><img src="deck/997898-router_connected_details.png" style="visibility: visible;" data-natural-width="1248" data-natural-height="757"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 669px; left: 181px; top: 445px;" data-block-id="bbfa8b1c49ab7644e77a191266c9e409"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 25; color: rgb(0, 0, 0);">
+<p style="text-align:left"><span style="font-size:16px">The details view provides further information such as STATUS as well as a list of interfaces.</span></p>
+</div></div></section><section data-background-size="initial"><div class="sl-block" data-block-type="text" style="width: 798px; left: 83px; top: -35px; height: auto;" data-block-id="f53f0a80cb79657dd4cac024593fd8cc">
+    <div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 12; color: rgb(0, 30, 130);">
+<h1><span style="font-size:32px">Configure a Router. Step Seven.</span></h1>
+</div>
+</div>
+<div class="sl-block" data-block-type="image" style="width: 326.261780104712px; height: 108px; left: 741px; top: 700px;" data-block-id="832d01c5a39d46eb1c1f501bf3a23c6b"><div class="sl-block-content" style="z-index: 10;"><img src="deck/985855-cloud_practice_white.png" style="visibility: visible;" data-natural-width="577" data-natural-height="191"></div></div>
+<div class="sl-block" data-block-type="shape" style="width: 960px; height: 700px; left: 0px; top: 1px;" data-block-id="b4b646cd32ae858a9d42e1f9c62dcedd"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(255, 255, 255)" data-shape-stretch="true" style="z-index: 11;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 960 700"><rect width="960" height="700" class="shape-element" fill="rgb(255, 255, 255)"></rect></svg></div></div>
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 799px; left: 121px; top: 494px;" data-block-id="2f92e36cc3f5e47501127fd32681e4df"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; color: rgb(0, 0, 0);">
+<p style="text-align:left"><span style="font-size:16px">The main view lists the interfaces for this router. The interfaces describe the connections to the private network.</span></p>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 30.6149068322981px; height: 31px; left: 80px; top: 502px;" data-block-id="5835b6d915c27b67c6f28a929f16c45c"><div class="sl-block-content" style="z-index: 14;"><img src="deck/997104-BlueIcon1.png" style="visibility: visible;" data-natural-width="159" data-natural-height="161"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 30.6149068322981px; height: 31px; left: 80px; top: 558px;" data-block-id="51c0d0890199be6f12ea1b98b3dfc391"><div class="sl-block-content" style="z-index: 15;"><img src="deck/997107-BlueIcon2.png" style="visibility: visible;" data-natural-width="159" data-natural-height="161"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 598px; height: 368.469387755102px; left: 181px; top: 72px;" data-block-id="c88b6c6f3768576370cb1d34a264114b"><div class="sl-block-content" style="z-index: 16;"><img src="deck/997901-router_inteface_create.png" style="visibility: visible;" data-natural-width="1274" data-natural-height="785"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 669px; left: 121px; top: 550px;" data-block-id="3dbd30f3c2defa148d65b71733c32bb5"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 17; color: rgb(0, 0, 0);">
+<p style="text-align:left"><span style="font-size:16px">To create a new interface, select <strong>+ Create Interface</strong>.</span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 669px; left: 160px; top: 574px;" data-block-id="cbd4f27a2fdfbdf043baf792abdaed4e"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 18; color: rgb(102, 102, 102);">
+<p style="text-align:left"><span style="font-size:16px"><em>A pop-up window will appear.</em></span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 669px; left: 160px; top: 514px;" data-block-id="f469e631380a5616a575316b91bed19c"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 20; color: rgb(102, 102, 102);">
+<p style="text-align:left"><span style="font-size:16px"><em>At present, the list should be empty</em></span></p>
+</div></div></section><section data-background-size="initial"><div class="sl-block" data-block-type="text" style="width: 798px; left: 83px; top: -35px; height: auto;" data-block-id="0cc8058cc1a75bec2d25f8d3d06fa701">
+    <div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 12; color: rgb(0, 30, 130);">
+        <h1>
+            <span style="font-size:32px">Configure a Router. Step Eight.</span>
+        </h1>
+    </div>
+</div>
+<div class="sl-block" data-block-type="image" style="width: 326.261780104712px; height: 108px; left: 741px; top: 700px;" data-block-id="874931a7036bdf96edf467fb397152bf">
+    <div class="sl-block-content" style="z-index: 10;">
+        <img src="deck/985855-cloud_practice_white.png" style="visibility: visible;" data-natural-width="577" data-natural-height="191">
+        </div>
+    </div>
+    <div class="sl-block" data-block-type="shape" style="width: 960px; height: 700px; left: 0px; top: 1px;" data-block-id="8cc2fc43f61c61ff9489c270f9ea418f">
+        <div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(255, 255, 255)" data-shape-stretch="true" style="z-index: 11;">
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 960 700"><rect width="960" height="700" class="shape-element" fill="rgb(255, 255, 255)"></rect></svg>
+        </div>
+    </div>
+    <div class="sl-block" data-block-type="text" style="height: auto; width: 797px; left: 121px; top: 494px;" data-block-id="5071b66b998da23a68e705baa02f9524">
+        <div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; color: rgb(0, 0, 0);">
+            <p style="text-align:left">
+                <span style="font-size:16px">In the Subnet drop-down box, select the subnet for the private network “internal: 192.168.55.0/24 (subnet-01)”.</span>
+            </p>
+        </div>
+    </div>
+    <div class="sl-block" data-block-type="image" style="width: 30.6149068322981px; height: 31px; left: 80px; top: 502px;" data-block-id="d36cf888396affdf87c4bc33be93f8d6">
+        <div class="sl-block-content" style="z-index: 14;">
+            <img src="deck/997104-BlueIcon1.png" style="visibility: visible;" data-natural-width="159" data-natural-height="161">
+            </div>
+        </div>
+        <div class="sl-block" data-block-type="image" style="width: 30.6149068322981px; height: 31px; left: 80px; top: 558px;" data-block-id="3d420b94d250505d27ce9d52f5bdca9c">
+            <div class="sl-block-content" style="z-index: 15;">
+                <img src="deck/997107-BlueIcon2.png" style="visibility: visible;" data-natural-width="159" data-natural-height="161">
+                </div>
+            </div>
+            <div class="sl-block" data-block-type="image" style="width: 598px; height: 366.53152434158px; left: 181px; top: 72.5px;" data-block-id="d7c731f81461196f292285c88b8cbbea">
+                <div class="sl-block-content" style="z-index: 16;">
+                    <img src="deck/997912-interface_create.png" style="visibility: visible;" data-natural-width="1253" data-natural-height="768">
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="text" style="height: auto; width: 669px; left: 121px; top: 553px;" data-block-id="106db02be7ac3f626996a3fc066fe9e6">
+                    <div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 17; color: rgb(0, 0, 0);">
+                        <p style="text-align:left">
+                            <span style="font-size:16px">Once you selected the private network, select  
+                                <strong>Add Interface</strong>
+                            </span>
+                        </p>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="text" style="height: auto; width: 669px; left: 160px; top: 582px;" data-block-id="0622885dd23119d59ad2348dc4a9b2d1">
+                    <div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 18; color: rgb(102, 102, 102);">
+                        <p style="text-align:left">
+                            <span style="font-size:16px">
+                                <em>You will be returned to the Router Overview view.</em>
+                            </span>
+                        </p>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="text" style="height: auto; width: 669px; left: 160px; top: 514px;" data-block-id="54652de4df4f719c696b7d375b2464eb">
+                    <div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 20; color: rgb(102, 102, 102);">
+                        <p style="text-align:left">
+                            <em>
+                                <span style="font-size:16px">
+                                    <span style="color:rgb(128, 128, 128); text-align:left">All other fields can be left to their default values.</span>
+                                </span>
+                            </em>
+                        </p>
+                    </div>
+                </div></section><section data-background-size="initial"><div class="sl-block" data-block-type="text" style="width: 798px; left: 83px; top: -35px; height: auto;" data-block-id="e9d435b0c73b01563481a671ab69f887">
+    <div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 12; color: rgb(0, 30, 130);">
+<h1><span style="font-size:32px">Configure a Router. Step Nine.</span></h1>
+</div>
+</div>
+<div class="sl-block" data-block-type="image" style="width: 326.261780104712px; height: 108px; left: 741px; top: 700px;" data-block-id="adc4ba461afc6e0f081549c1950edb38"><div class="sl-block-content" style="z-index: 10;"><img src="deck/985855-cloud_practice_white.png" style="visibility: visible;" data-natural-width="577" data-natural-height="191"></div></div>
+<div class="sl-block" data-block-type="shape" style="width: 960px; height: 700px; left: 0px; top: 1px;" data-block-id="88684a891c1af54d894896d513e033d7"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(255, 255, 255)" data-shape-stretch="true" style="z-index: 11;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 960 700"><rect width="960" height="700" class="shape-element" fill="rgb(255, 255, 255)"></rect></svg></div></div>
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 669px; left: 121px; top: 494px;" data-block-id="9c8cc2de52a805e28504c6d3ca2ff858"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; color: rgb(0, 0, 0);">
+<p style="text-align:left"><span style="font-size:16px">Once completed, a new interface entry will appear in the Interfaces list.</span></p>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 30.6149068322981px; height: 31px; left: 80px; top: 502px;" data-block-id="0d4568b51c05b8d2dad3b5deaabf36df"><div class="sl-block-content" style="z-index: 14;"><img src="deck/997104-BlueIcon1.png" style="visibility: visible;" data-natural-width="159" data-natural-height="161"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 30.6149068322981px; height: 31px; left: 80px; top: 558px;" data-block-id="1d3036e739fb0c4f52a7040253e784c8"><div class="sl-block-content" style="z-index: 15;"><img src="deck/997107-BlueIcon2.png" style="visibility: visible;" data-natural-width="159" data-natural-height="161"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 598px; height: 366.844408427877px; left: 181px; top: 72.5px;" data-block-id="331a9504a764536393cf544aab4684d6"><div class="sl-block-content" style="z-index: 16;"><img src="deck/997924-interface_done.png" style="visibility: visible;" data-natural-width="1234" data-natural-height="757"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 669px; left: 121px; top: 550px;" data-block-id="b15ce6ed79015638e5b0518e5e16597a"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 17; color: rgb(0, 0, 0);">
+<p style="text-align:left"><span style="font-size:16px">To view the connection, select <strong>Network Topology</strong>.</span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 669px; left: 181px; top: 445px;" data-block-id="285a47569a562c4160a6ccf6c4047e41"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 20; color: rgb(0, 0, 0);">
+<p style="text-align:left"><span style="font-size:16px">With the Interface, the Router should now connect the public and private networks.</span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 669px; left: 160px; top: 518px;" data-block-id="8e88cb6d2b47d81c82c4239b175beea4"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 21; color: rgb(102, 102, 102);">
+<p style="text-align:left"><em><span style="font-size:16px">If the Status is “DOWN”, hit re-fresh on your browser a few times to see if the status changes.</span></em></p>
+</div></div></section><section data-background-size="initial"><div class="sl-block" data-block-type="text" style="width: 798px; left: 83px; top: -35px; height: auto;" data-block-id="7dab22e3832f39963685e697bf009caa">
+    <div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 12; color: rgb(0, 30, 130);">
+<h1><span style="font-size:32px">Router Configured.</span></h1>
+</div>
+</div>
+<div class="sl-block" data-block-type="image" style="width: 326.261780104712px; height: 108px; left: 741px; top: 700px;" data-block-id="128caec546cefdef3b4de7f739915b01"><div class="sl-block-content" style="z-index: 10;"><img src="deck/985855-cloud_practice_white.png" style="visibility: visible;" data-natural-width="577" data-natural-height="191"></div></div>
+<div class="sl-block" data-block-type="shape" style="width: 960px; height: 700px; left: 0px; top: 1px;" data-block-id="a4f097e7f585c7576f6b61abd9268e2e"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(255, 255, 255)" data-shape-stretch="true" style="z-index: 11;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 960 700"><rect width="960" height="700" class="shape-element" fill="rgb(255, 255, 255)"></rect></svg></div></div>
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 669px; left: 121px; top: 468px;" data-block-id="6c960c66e7a635eb020770703bfdcd37"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; color: rgb(0, 0, 0);">
+<p style="text-align:left"><span style="font-size:16px">The router has now been configured to connect the public and private networks.</span></p>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 30.6149068322981px; height: 31px; left: 80px; top: 476px;" data-block-id="876e66836a0787a160e227ad8b0d778c"><div class="sl-block-content" style="z-index: 14;"><img src="deck/997104-BlueIcon1.png" style="visibility: visible;" data-natural-width="159" data-natural-height="161"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 30.6149068322981px; height: 31px; left: 80px; top: 532px;" data-block-id="546004312e07b63d0e7ce1def4850912"><div class="sl-block-content" style="z-index: 15;"><img src="deck/997107-BlueIcon2.png" style="visibility: visible;" data-natural-width="159" data-natural-height="161"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 598px; height: 365.24px; left: 181px; top: 73.5px;" data-block-id="09569ef16d00cabbe306813c4a118abb"><div class="sl-block-content" style="z-index: 18;"><img src="deck/997930-network_topology_pub_and_priv.png" style="visibility: visible;" data-natural-width="1300" data-natural-height="794"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 669px; left: 121px; top: 524px;" data-block-id="9fe95896f60f98c57f27b5d4d7055b1b"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 19; color: rgb(0, 0, 0);">
+<p style="text-align:left"><span style="font-size:16px">To create a new instance, select <strong>Instances</strong> from the navigation pane.</span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 669px; left: 160px; top: 488px;" data-block-id="f2ddc7eefa54ceaa93e1451444004a2a"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 20; color: rgb(102, 102, 102);">
+<p style="text-align:left"><span style="font-size:16px">It is now possible to add new instances and access them from the public internet.</span></p>
+</div></div></section><section data-background-size="initial"><div class="sl-block" data-block-type="text" style="width: 798px; left: 83px; top: -35px; height: auto;" data-block-id="e7c9fb54b5089a11913668bb699cc2af">
+    <div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 12; color: rgb(0, 30, 130);">
+<h1><span style="font-size:32px">Create an Instance</span></h1>
+</div>
+</div>
+<div class="sl-block" data-block-type="image" style="width: 326.261780104712px; height: 108px; left: 741px; top: 700px;" data-block-id="1971b89cacbcedac1352a6fa2af6f562"><div class="sl-block-content" style="z-index: 10;"><img src="deck/985855-cloud_practice_white.png" style="visibility: visible;" data-natural-width="577" data-natural-height="191"></div></div>
+<div class="sl-block" data-block-type="shape" style="width: 960px; height: 700px; left: 0px; top: 1px;" data-block-id="721031cd37d30c6c7b20c035194528aa"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(255, 255, 255)" data-shape-stretch="true" style="z-index: 11;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 960 700"><rect width="960" height="700" class="shape-element" fill="rgb(255, 255, 255)"></rect></svg></div></div>
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 669px; left: 121px; top: 494px;" data-block-id="52d58b67082a2be70cb5b3f7895f06d2"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; color: rgb(0, 0, 0);">
+<p style="text-align:left"><span style="font-size:16px">The main view lists the instances created for this project. The list should be empty.</span></p>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 30.6149068322981px; height: 31px; left: 80px; top: 502px;" data-block-id="1cbe4535a42001d470cb9d059d77602a"><div class="sl-block-content" style="z-index: 14;"><img src="deck/997104-BlueIcon1.png" style="visibility: visible;" data-natural-width="159" data-natural-height="161"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 30.6149068322981px; height: 31px; left: 80px; top: 558px;" data-block-id="e207ee4c03f566f85600faffe43ba066"><div class="sl-block-content" style="z-index: 15;"><img src="deck/997107-BlueIcon2.png" style="visibility: visible;" data-natural-width="159" data-natural-height="161"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 598px; height: 372.892119357307px; left: 181px; top: 69.5px;" data-block-id="bb82ce624c6e26ea4935f927265451aa"><div class="sl-block-content" style="z-index: 18;"><img src="deck/997994-instance_create.png" style="visibility: visible;" data-natural-width="1307" data-natural-height="815"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 669px; left: 121px; top: 550px;" data-block-id="0198c5067020843d025cb8aa5908d647"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 19; color: rgb(0, 0, 0);">
+<p style="text-align:left"><span style="font-size:16px">To create a new instance, select <strong>+ Launch Router</strong></span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 669px; left: 160px; top: 574px;" data-block-id="f6ab33c17cfdf833e0e92e79bcd52f5a"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 20; color: rgb(102, 102, 102);">
+<p style="text-align:left"><span style="font-size:16px"><em>A pop-up window will appear.</em></span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 669px; left: 181px; top: 445px;" data-block-id="91b23fcd5fc71d417dcf77ab4d84a21b"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 25; color: rgb(0, 0, 0);">
+<p style="text-align:left"><span style="font-size:16px">The router will connect the public network to the private network.</span></p>
+</div></div></section><section data-background-size="initial"><div class="sl-block" data-block-type="text" style="width: 798px; left: 83px; top: -35px; height: auto;" data-block-id="bb30b65fd4fc1c2c86bec7acf12487c3">
+    <div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 12; color: rgb(0, 30, 130);">
+<h1><span style="font-size:32px">Create an Instance. Step One.</span></h1>
+</div>
+</div>
+<div class="sl-block" data-block-type="image" style="width: 326.261780104712px; height: 108px; left: 741px; top: 700px;" data-block-id="3db2138f3d42e89474b7ba58be6313ba"><div class="sl-block-content" style="z-index: 10;"><img src="deck/985855-cloud_practice_white.png" style="visibility: visible;" data-natural-width="577" data-natural-height="191"></div></div>
+<div class="sl-block" data-block-type="shape" style="width: 960px; height: 700px; left: 0px; top: 1px;" data-block-id="4a76359b5192b8430e7dd09235b710ab"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(255, 255, 255)" data-shape-stretch="true" style="z-index: 11;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 960 700"><rect width="960" height="700" class="shape-element" fill="rgb(255, 255, 255)"></rect></svg></div></div>
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 798px; left: 121px; top: 441px;" data-block-id="dc27ecca4c9748391265523acd16a210"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; color: rgb(0, 0, 0);">
+<p style="text-align:left"><span style="font-size:16px">In the Instance Name text box, provide a name for the instance. A good choice is “web-app-instance”.</span></p>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 30.6149068322981px; height: 31px; left: 80px; top: 449px;" data-block-id="9e75277009b691dbaa5525cffbc1560b"><div class="sl-block-content" style="z-index: 15;"><img src="deck/997104-BlueIcon1.png" style="visibility: visible;" data-natural-width="159" data-natural-height="161"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 30.6149068322981px; height: 31px; left: 80px; top: 497px;" data-block-id="7119e6d3ded37bf05b619a682e2e655a"><div class="sl-block-content" style="z-index: 16;"><img src="deck/997107-BlueIcon2.png" style="visibility: visible;" data-natural-width="159" data-natural-height="161"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 30.6149068322981px; height: 31px; left: 80px; top: 542px;" data-block-id="314bc253fac27356faf63a8532774b95"><div class="sl-block-content" style="z-index: 17;"><img src="deck/997111-BlueIcon3.png" style="visibility: visible;" data-natural-width="159" data-natural-height="161"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 30.6149068322981px; height: 31px; left: 80px; top: 596px;" data-block-id="ab114ce8eb0df1882297feaa9328e395"><div class="sl-block-content" style="z-index: 18;"><img src="deck/997114-BlueIcon4.png" style="visibility: visible;" data-natural-width="159" data-natural-height="161"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 598px; height: 372.430882352941px; left: 181px; top: 70px;" data-block-id="4232ed01e6371435e2ed9c4ae91d7330"><div class="sl-block-content" style="z-index: 19;"><img src="deck/998000-instance_create_details.png" style="visibility: visible;" data-natural-width="1360" data-natural-height="847"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 669px; left: 121px; top: 487px;" data-block-id="733a5205b5fec3174cba5509e8e155ab"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 20; color: rgb(0, 0, 0);">
+<p style="text-align:left"><span style="font-size:16px">In the Flavour pull-down menu, select <strong>Micro-Small</strong>.</span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 669px; left: 121px; top: 533px;" data-block-id="aa84a88614e499c6969793bd7215a8a2"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 21; color: rgb(0, 0, 0);">
+<p style="text-align:left"><span style="font-size:16px">In the Instance Boot Source pull-down menu, select <strong>Boot from Image</strong>.</span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 669px; left: 160px; top: 558px;" data-block-id="5c70ebaaa190afd804e79c2ee2563835"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 22; color: rgb(102, 102, 102);">
+<p style="text-align:left"><em><span style="font-size:16px">Once selected, a new pull-down box will appear entitled “Image Name”.</span></em></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 766px; left: 121px; top: 588px;" data-block-id="a1111d68c04ce70a74a889a084c7313d"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 23; color: rgb(0, 0, 0);">
+<p style="text-align:left"><span style="font-size:16px">In the Image Name pull-down menu, select<strong> ubuntu-trusty-server-cloudimg-amd64-disk1.2014-09-27</strong>.</span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 669px; left: 160px; top: 612px;" data-block-id="212297646be6e2863772980c863064ff"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 24; color: rgb(102, 102, 102);">
+<p style="text-align:left"><em><span style="font-size:16px">All other fields can be left to their default values.</span></em></p>
+</div></div>
+<div class="sl-block" data-block-type="image" data-block-id="c00927c075373da598060b9ce053179f" style="min-width: 30px; min-height: 30px; width: 31px; height: 31.3899371069182px; left: 80px; top: 650.610046386719px;"><div class="sl-block-content" style="z-index: 25;"><img src="deck/997998-BlueIcon5.png" style="visibility: visible;" data-natural-width="159" data-natural-height="161"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 798px; left: 121px; top: 643px;" data-block-id="ad59dff3da5b7f1a7b66a208bbd76e34"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 26; color: rgb(0, 0, 0);">
+<p style="text-align:left"><span style="font-size:16px">Select the <strong>Access and Security</strong> tab to move to the next step.</span></p>
+</div></div></section><section data-background-size="initial"><div class="sl-block" data-block-type="text" style="width: 798px; left: 83px; top: -35px; height: auto;" data-block-id="0bf1718b815e20c8bc4842b054ad8a97">
+    <div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 12; color: rgb(0, 30, 130);">
+<h1><span style="font-size:32px">Create an Instance. Step Two.</span></h1>
+</div>
+</div>
+<div class="sl-block" data-block-type="image" style="width: 326.261780104712px; height: 108px; left: 741px; top: 700px;" data-block-id="4615e5ccf82e8e6752039fae268d71c9"><div class="sl-block-content" style="z-index: 10;"><img src="deck/985855-cloud_practice_white.png" style="visibility: visible;" data-natural-width="577" data-natural-height="191"></div></div>
+<div class="sl-block" data-block-type="shape" style="width: 960px; height: 700px; left: 0px; top: 1px;" data-block-id="50a696515d5d00c116656ebb6f1cd220"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(255, 255, 255)" data-shape-stretch="true" style="z-index: 11;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 960 700"><rect width="960" height="700" class="shape-element" fill="rgb(255, 255, 255)"></rect></svg></div></div>
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 669px; left: 121px; top: 484px;" data-block-id="4df182b78fe30494f8d166396d51eade"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; color: rgb(0, 0, 0);">
+<p style="text-align:left"><span style="font-size:16px">In the Keypair pull-down menu, select <strong>web_key_pair</strong>.</span></p>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 30.6149068322981px; height: 31px; left: 80px; top: 492px;" data-block-id="672141449b8df1e0c9a1473a01ebdaf9"><div class="sl-block-content" style="z-index: 14;"><img src="deck/997104-BlueIcon1.png" style="visibility: visible;" data-natural-width="159" data-natural-height="161"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 30.6149068322981px; height: 31px; left: 80px; top: 548px;" data-block-id="791bfd1a12919d0ab41c633580626328"><div class="sl-block-content" style="z-index: 15;"><img src="deck/997107-BlueIcon2.png" style="visibility: visible;" data-natural-width="159" data-natural-height="161"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 598px; height: 372.660015349194px; left: 181px; top: 69.5px;" data-block-id="9a128bbda60d2abb0a3d3bf5be88d3b3"><div class="sl-block-content" style="z-index: 18;"><img src="deck/998013-instance_create_security.png" style="visibility: visible;" data-natural-width="1303" data-natural-height="812"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 669px; left: 121px; top: 540px;" data-block-id="603797076ff9fbc48f5bedaabb665886"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 19; color: rgb(0, 0, 0);">
+<p style="text-align:left"><span style="font-size:16px">Select the <strong>Networking </strong>tab to move to the next step.</span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 669px; left: 148px; top: 504px;" data-block-id="f6c23531cda60833bb2a7233a7b76a2d"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 20; color: rgb(102, 102, 102);">
+<p style="text-align:left"><em><span style="font-size:16px">All other fields can be left to their default values.</span></em></p>
+</div></div></section><section data-background-size="initial"><div class="sl-block" data-block-type="text" style="width: 798px; left: 83px; top: -35px; height: auto;" data-block-id="d9a780704bd2e14b9e8e80189ac36f42">
+    <div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 12; color: rgb(0, 30, 130);">
+<h1><span style="font-size:32px">Create an Instance. Step Three.</span></h1>
+</div>
+</div>
+<div class="sl-block" data-block-type="image" style="width: 326.261780104712px; height: 108px; left: 741px; top: 700px;" data-block-id="60a786cef60e796ec24379095d95442a"><div class="sl-block-content" style="z-index: 10;"><img src="deck/985855-cloud_practice_white.png" style="visibility: visible;" data-natural-width="577" data-natural-height="191"></div></div>
+<div class="sl-block" data-block-type="shape" style="width: 960px; height: 700px; left: 0px; top: 1px;" data-block-id="7be646765ec6453966fde84db02cf7a1"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(255, 255, 255)" data-shape-stretch="true" style="z-index: 11;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 960 700"><rect width="960" height="700" class="shape-element" fill="rgb(255, 255, 255)"></rect></svg></div></div>
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 793px; left: 121px; top: 484px;" data-block-id="d75590e0a68c43456236ad6f6b4b9090"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; color: rgb(0, 0, 0);">
+<p style="text-align:left"><span style="font-size:16px">From the “Available networks” box, drag and drop the internal network label into the “Selected Networks” box.</span></p>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 30.6149068322981px; height: 31px; left: 80px; top: 492px;" data-block-id="51fae7581d8092468967351272c5f7b5"><div class="sl-block-content" style="z-index: 14;"><img src="deck/997104-BlueIcon1.png" style="visibility: visible;" data-natural-width="159" data-natural-height="161"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 30.6149068322981px; height: 31px; left: 80px; top: 548px;" data-block-id="7b459542928d70b0ca0bcd6eb35c349c"><div class="sl-block-content" style="z-index: 15;"><img src="deck/997107-BlueIcon2.png" style="visibility: visible;" data-natural-width="159" data-natural-height="161"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 598px; height: 370.34693877551px; left: 181px; top: 71px;" data-block-id="4f64b3b486c0ce5517675e673e673352"><div class="sl-block-content" style="z-index: 18;"><img src="deck/1000782-instance_create_networking.png" style="visibility: visible;" data-natural-width="1274" data-natural-height="789"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 669px; left: 121px; top: 540px;" data-block-id="b7420a20da46795a539e8741b5abdd40"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 19; color: rgb(0, 0, 0);">
+<p style="text-align:left"><span style="font-size:16px">Select the <strong>Post-Creation</strong> tab to move to the next step.</span></p>
+</div></div>
+</section><section data-background-size="initial"><div class="sl-block" data-block-type="text" style="width: 798px; left: 83px; top: -35px; height: auto;" data-block-id="32898757c949c5ccb7ba25803974fa8b">
+    <div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 12; color: rgb(0, 30, 130);">
+<h1><span style="font-size:32px">Create an Instance. Step Four.</span></h1>
+</div>
+</div>
+<div class="sl-block" data-block-type="image" style="width: 326.261780104712px; height: 108px; left: 741px; top: 700px;" data-block-id="a9dadab3854db8302ba59cd4ee6bc4d3"><div class="sl-block-content" style="z-index: 10;"><img src="deck/985855-cloud_practice_white.png" style="visibility: visible;" data-natural-width="577" data-natural-height="191"></div></div>
+<div class="sl-block" data-block-type="shape" style="width: 960px; height: 700px; left: 0px; top: 1px;" data-block-id="be1a597904323edd14b5bf4a6e829e8a"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(255, 255, 255)" data-shape-stretch="true" style="z-index: 11;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 960 700"><rect width="960" height="700" class="shape-element" fill="rgb(255, 255, 255)"></rect></svg></div></div>
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 669px; left: 121px; top: 530px;" data-block-id="fd7e96ebef91d1b65551171bac80478f"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; color: rgb(0, 0, 0);">
+<p style="text-align:left"><span style="font-size:16px">When you have copied the script, paste it in the Customisation Script textbox.</span></p>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 30.6149068322981px; height: 31px; left: 80px; top: 538px;" data-block-id="32b482ceaeb015640e7363cd141cdbba"><div class="sl-block-content" style="z-index: 14;"><img src="deck/997104-BlueIcon1.png" style="visibility: visible;" data-natural-width="159" data-natural-height="161"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 30.6149068322981px; height: 31px; left: 80px; top: 594px;" data-block-id="b789e7eae15fb8ca01db0026f0840526"><div class="sl-block-content" style="z-index: 15;"><img src="deck/997107-BlueIcon2.png" style="visibility: visible;" data-natural-width="159" data-natural-height="161"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 598px; height: 371.633383010432px; left: 181px; top: 70.5px;" data-block-id="cfaf2ff36cdbef46e584914cb6e8cc0f"><div class="sl-block-content" style="z-index: 16;"><img src="deck/1000801-instance_create_post_create_paste_script.png" style="visibility: visible;" data-natural-width="1342" data-natural-height="834"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 669px; left: 121px; top: 586px;" data-block-id="b84771fed815c4f9a264e6b194975d6a"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 17; color: rgb(0, 0, 0);">
+<p style="text-align:left"><span style="font-size:16px">Once you have pasted the script, select <strong>Launch</strong> to launch the instance.</span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 669px; left: 137px; top: 611px;" data-block-id="35bf1f77fd40ac3c4a3bd8acf7fe7e86"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 18; color: rgb(102, 102, 102);">
+<p style="text-align:left"><em><span style="font-size:16px">You will be returned to the Instances view</span></em></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 929px; left: 19px; top: 458px;" data-block-id="27e3ebda4b1c499d3d4594593aa43e11"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 19; color: rgb(0, 0, 0);">
+<p style="text-align:left"><span style="font-size:16px">To deploy this instance as the weather app web server, we need to install extra software packages. The OpenStack customisation</span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 920px; left: 19px; top: 484px;" data-block-id="ecacc5cea995fcb60ed9fa009317897e"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 21; color: rgb(0, 0, 0);">
+<p style="text-align:left"><span style="font-size:16px">script allows us to automatically install everything </span><span style="font-size:16px">as the instance is launched.  The script can be found <strong><a href="https://raw.githubusercontent.com/cloudpractice/WeatherApp/master/build-scripts/linux-presentation.txt" target="_blank">here</a></strong></span></p>
+</div></div></section><section data-background-size="initial"><div class="sl-block" data-block-type="text" style="width: 798px; left: 83px; top: -35px; height: auto;" data-block-id="2493a2e8d1ebf1f30dd04b040f9bfed4">
+    <div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 12; color: rgb(0, 30, 130);">
+<h1><span style="font-size:32px">Instance Created.</span></h1>
+</div>
+</div>
+<div class="sl-block" data-block-type="image" style="width: 326.261780104712px; height: 108px; left: 741px; top: 700px;" data-block-id="4c9cfe5fb4cc61335d25821192344ed8"><div class="sl-block-content" style="z-index: 10;"><img src="deck/985855-cloud_practice_white.png" style="visibility: visible;" data-natural-width="577" data-natural-height="191"></div></div>
+<div class="sl-block" data-block-type="shape" style="width: 960px; height: 700px; left: 0px; top: 1px;" data-block-id="9af10056aa205ad3fb4efd8dc0302203"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(255, 255, 255)" data-shape-stretch="true" style="z-index: 11;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 960 700"><rect width="960" height="700" class="shape-element" fill="rgb(255, 255, 255)"></rect></svg></div></div>
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 669px; left: 121px; top: 484px;" data-block-id="676481c617efa1299b9fbaf0535d32fa"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; color: rgb(0, 0, 0);">
+<p style="text-align:left"><span style="font-size:16px">Once completed, a new instance entry will appear in the Instances list.</span></p>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 30.6149068322981px; height: 31px; left: 80px; top: 492px;" data-block-id="510d4eb7452c9b53f3d2c43d61a37552"><div class="sl-block-content" style="z-index: 14;"><img src="deck/997104-BlueIcon1.png" style="visibility: visible;" data-natural-width="159" data-natural-height="161"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 30.6149068322981px; height: 31px; left: 80px; top: 548px;" data-block-id="3ade239be7f10f31c06cbde668d56fc4"><div class="sl-block-content" style="z-index: 15;"><img src="deck/997107-BlueIcon2.png" style="visibility: visible;" data-natural-width="159" data-natural-height="161"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 598px; height: 372.178301093356px; left: 181px; top: 70px;" data-block-id="d98724fcc4aa194f618ea5fdcc1dc52d"><div class="sl-block-content" style="z-index: 16;"><img src="deck/1000837-instance_create_done.png" style="visibility: visible;" data-natural-width="1189" data-natural-height="740"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 669px; left: 121px; top: 543px;" data-block-id="c83866f1de0db7ffde61384a7d46f2c7"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 17; color: rgb(0, 0, 0);">
+<p style="text-align:left"><span style="font-size:16px">Select the <strong>Networking </strong>tab to move to the next step.</span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 669px; left: 148px; top: 504px;" data-block-id="ee0564db59680f37f6b7d39ecb1a58b1"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 18; color: rgb(102, 102, 102);">
+<p style="text-align:left"><em><span style="font-size:16px">All other fields can be left to their default values.</span></em></p>
+</div></div>
+<div class="sl-block" data-block-type="image" data-block-id="6347b7f89ae0f25c62030c84740f7155" style="min-width: 30px; min-height: 30px; width: 31px; height: 31.3899371069182px; left: 80px; top: 604px;"><div class="sl-block-content" style="z-index: 20;"><img src="deck/1000842-BlueIcon3.png" style="visibility: visible;" data-natural-width="159" data-natural-height="161"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 669px; left: 121px; top: 592px;" data-block-id="fb5bc1dbd97f96416d4656baec17bf08"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 21; color: rgb(0, 0, 0);">
+<p style="text-align:left"><span style="font-size:16px">In the Keypair pull-down menu, select <strong>web_key_pair</strong>.</span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 669px; left: 148px; top: 612px;" data-block-id="e290d9d9692c868f7a661537d9c7828d"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 22; color: rgb(102, 102, 102);">
+<p style="text-align:left"><em><span style="font-size:16px">All other fields can be left to their default values.</span></em></p>
+</div></div></section><section data-background-size="initial"><div class="sl-block" data-block-type="text" style="width: 798px; left: 83px; top: -35px; height: auto;" data-block-id="5331ac935866b2cf1fbcf84d2cadf326">
+    <div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 12; color: rgb(0, 30, 130);">
+<h1><span style="font-size:32px">Add a Public IP Address.</span></h1>
+</div>
+</div>
+<div class="sl-block" data-block-type="image" style="width: 326.261780104712px; height: 108px; left: 741px; top: 700px;" data-block-id="ea86d8a3e4606cefaf60c7d5a7045166"><div class="sl-block-content" style="z-index: 10;"><img src="deck/985855-cloud_practice_white.png" style="visibility: visible;" data-natural-width="577" data-natural-height="191"></div></div>
+<div class="sl-block" data-block-type="shape" style="width: 960px; height: 700px; left: 0px; top: 1px;" data-block-id="33d374da3a0ff126c4c382c93cf7b1d0"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(255, 255, 255)" data-shape-stretch="true" style="z-index: 11;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 960 700"><rect width="960" height="700" class="shape-element" fill="rgb(255, 255, 255)"></rect></svg></div></div>
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 669px; left: 121px; top: 484px;" data-block-id="f1f316c618f4b77629a3ba3a9fe3d917"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; color: rgb(0, 0, 0);">
+<p style="text-align:left"><span style="font-size:16px">The main view lists the Security Groups for this project.</span></p>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 30.6149068322981px; height: 31px; left: 80px; top: 492px;" data-block-id="f78103ba1c67e9019d70f3361619ea2e"><div class="sl-block-content" style="z-index: 14;"><img src="deck/997104-BlueIcon1.png" style="visibility: visible;" data-natural-width="159" data-natural-height="161"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 30.6149068322981px; height: 31px; left: 80px; top: 548px;" data-block-id="15f5af0de2730be551151756fc0d9399"><div class="sl-block-content" style="z-index: 15;"><img src="deck/997107-BlueIcon2.png" style="visibility: visible;" data-natural-width="159" data-natural-height="161"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 598px; height: 381.731878409977px; left: 181px; top: 65.5px;" data-block-id="908d4db67dbb0818a47e117b3a92d282"><div class="sl-block-content" style="z-index: 18;"><img src="deck/1009439-access_security.png" style="visibility: visible;" data-natural-width="1283" data-natural-height="819"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 669px; left: 121px; top: 540px;" data-block-id="e8e281088545ac22819400d63f3a4cff"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 19; color: rgb(0, 0, 0);">
+<p style="color: rgb(0, 0, 0); text-align: left;"><span style="font-size:16px">To add a public IP address to the instance, select the <strong>Floating IPs</strong> tab.</span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 669px; left: 148px; top: 504px;" data-block-id="31596d23544d7c81189c78d9cc25aec4"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 20; color: rgb(102, 102, 102);">
+<p style="text-align:left"><span style="font-size:16px"><em><span style="color:rgb(128, 128, 128); text-align:left">One security group – “default” – has been set up for the project.</span></em></span></p>
+</div></div></section><section data-background-size="initial"><div class="sl-block" data-block-type="text" style="width: 798px; left: 83px; top: -35px; height: auto;" data-block-id="0c879a8945cdd6b801f261a2cb9f6e5a">
+    <div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 12; color: rgb(0, 30, 130);">
+<h1><span style="font-size:32px">Add a Public IP Address. Step One.</span></h1>
+</div>
+</div>
+<div class="sl-block" data-block-type="image" style="width: 326.261780104712px; height: 108px; left: 741px; top: 700px;" data-block-id="93752808311ba7760956bb1e7314364b"><div class="sl-block-content" style="z-index: 10;"><img src="deck/985855-cloud_practice_white.png" style="visibility: visible;" data-natural-width="577" data-natural-height="191"></div></div>
+<div class="sl-block" data-block-type="shape" style="width: 960px; height: 700px; left: 0px; top: 1px;" data-block-id="9f405a0845e3d5c304a2feffae261a07"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(255, 255, 255)" data-shape-stretch="true" style="z-index: 11;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 960 700"><rect width="960" height="700" class="shape-element" fill="rgb(255, 255, 255)"></rect></svg></div></div>
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 811px; left: 121px; top: 484px;" data-block-id="6a2c434ab78de4946b6ac38de222f4d4"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; color: rgb(0, 0, 0);">
+<p style="text-align:left"><span style="font-size:16px">The main view lists the Floating IPs for this project. Presently, there are no IP addresses allocated to the project.</span></p>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 30.6149068322981px; height: 31px; left: 80px; top: 492px;" data-block-id="9e65766e174a902cc1f7404d236fd320"><div class="sl-block-content" style="z-index: 14;"><img src="deck/997104-BlueIcon1.png" style="visibility: visible;" data-natural-width="159" data-natural-height="161"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 30.6149068322981px; height: 31px; left: 80px; top: 548px;" data-block-id="4ca2a371fb026b4e353618368ab43fcd"><div class="sl-block-content" style="z-index: 15;"><img src="deck/997107-BlueIcon2.png" style="visibility: visible;" data-natural-width="159" data-natural-height="161"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 598px; height: 382.375px; left: 181px; top: 65.5px;" data-block-id="6adb4aa8a24de7cd29f28f8f614984f7"><div class="sl-block-content" style="z-index: 18;"><img src="deck/1009441-access_security_floating_ip.png" style="visibility: visible;" data-natural-width="1248" data-natural-height="798"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 669px; left: 121px; top: 540px;" data-block-id="c02950ebb9cf619f98b5b81db6d70b45"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 19; color: rgb(0, 0, 0);">
+<p style="color:rgb(0, 0, 0); text-align:left"><span style="font-size:16px"><span style="text-align:left">To allocate a public IP, select </span><strong>Allocate IP To Project</strong><span style="text-align:left">.</span></span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 669px; left: 137px; top: 560px;" data-block-id="cc8786fa37eb9468f687e3385079ecf3"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 20; color: rgb(102, 102, 102);">
+<p style="text-align:left"><span style="font-size:16px"><em><span style="color:rgb(128, 128, 128); text-align:left">A pop-up window will appear.</span></em></span></p>
+</div></div></section><section data-background-size="initial"><div class="sl-block" data-block-type="text" style="width: 798px; left: 83px; top: -37px; height: auto;" data-block-id="96b54664f8fa06fcd60eaac62042a16d">
+    <div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 12; color: rgb(0, 30, 130);">
+<h1><span style="font-size:32px">Add a Public IP Address. Step Two</span></h1>
+</div>
+</div>
+<div class="sl-block" data-block-type="image" style="width: 326.261780104712px; height: 108px; left: 741px; top: 698px;" data-block-id="349986f222aa80bbc43a0504dfd1f7e5"><div class="sl-block-content" style="z-index: 10;"><img src="deck/985855-cloud_practice_white.png" style="visibility: visible;" data-natural-width="577" data-natural-height="191"></div></div>
+<div class="sl-block" data-block-type="shape" style="width: 960px; height: 700px; left: 0px; top: 0px;" data-block-id="c1ba150356cc5fa8cc511dc1cfce0867"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(255, 255, 255)" data-shape-stretch="true" style="z-index: 11;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 960 700"><rect width="960" height="700" class="shape-element" fill="rgb(255, 255, 255)"></rect></svg></div></div>
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 669px; left: 121px; top: 482px;" data-block-id="51ee020474c08e0bffcd803314e290d5"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; color: rgb(0, 0, 0);">
+<p style="text-align:left"><span style="font-size:16px"><span style="text-align:left">In the Pool pull-down menu, select </span><strong>public-floating-601</strong><span style="text-align:left">.</span></span></p>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 30.6149068322981px; height: 31px; left: 80px; top: 490px;" data-block-id="abb2bbad25f12bfd71bc578e6660cd8c"><div class="sl-block-content" style="z-index: 14;"><img src="deck/997104-BlueIcon1.png" style="visibility: visible;" data-natural-width="159" data-natural-height="161"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 30.6149068322981px; height: 31px; left: 80px; top: 546px;" data-block-id="d4ce7ada1ced92553e82e3eee4424a57"><div class="sl-block-content" style="z-index: 15;"><img src="deck/997107-BlueIcon2.png" style="visibility: visible;" data-natural-width="159" data-natural-height="161"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 598px; height: 380.05421686747px; left: 181px; top: 65px;" data-block-id="89c80a138d888921f46f4740458e412b"><div class="sl-block-content" style="z-index: 16;"><img src="deck/1009446-access_security_floating_ip_allocate.png" style="visibility: visible;" data-natural-width="1328" data-natural-height="844"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 669px; left: 121px; top: 541px;" data-block-id="81fb732a1c5dc00e35f2292301e06c3c"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 17; color: rgb(0, 0, 0);">
+<p style="color:rgb(0, 0, 0); text-align:left"><span style="font-size:16px"><span style="text-align:left">Select </span><strong>Allocate IP</strong><span style="text-align:left"> to allocate the IP address to the project.</span></span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 669px; left: 148px; top: 502px;" data-block-id="56cae6f2f4cb00ebb33a3366a2038898"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 18; color: rgb(102, 102, 102);">
+<p style="text-align:left"><em><span style="font-size:16px"><span style="color:rgb(128, 128, 128); text-align:left">“public-floating-601” should be the only available option.</span></span></em></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 669px; left: 148px; top: 560px;" data-block-id="21fc842093921f106ab410b5f02561d9"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 20; color: rgb(102, 102, 102);">
+<p style="text-align:left"><em><span style="font-size:16px"><span style="color:rgb(128, 128, 128); text-align:left">You will be returned to the Floating IPs view.</span></span></em></p>
+</div></div></section><section data-background-size="initial"><div class="sl-block" data-block-type="text" style="width: 798px; left: 83px; top: -37px; height: auto;" data-block-id="d10b0874517e1be9bdf4300129fa9581">
+    <div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 12; color: rgb(0, 30, 130);">
+<h1><span style="font-size:32px">Add a Public IP Address. Step Three</span></h1>
+</div>
+</div>
+<div class="sl-block" data-block-type="image" style="width: 326.261780104712px; height: 108px; left: 741px; top: 698px;" data-block-id="afb324d7ef33718a6ef496c8207e783d"><div class="sl-block-content" style="z-index: 10;"><img src="deck/985855-cloud_practice_white.png" style="visibility: visible;" data-natural-width="577" data-natural-height="191"></div></div>
+<div class="sl-block" data-block-type="shape" style="width: 960px; height: 700px; left: 0px; top: 0px;" data-block-id="4bbb53db0bc81a1857a4255dbd59ef5c"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(255, 255, 255)" data-shape-stretch="true" style="z-index: 11;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 960 700"><rect width="960" height="700" class="shape-element" fill="rgb(255, 255, 255)"></rect></svg></div></div>
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 669px; left: 121px; top: 482px;" data-block-id="87e50dc23f8e73bf319be589265ac0d7"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; color: rgb(0, 0, 0);">
+<p style="text-align:left"><span style="font-size:16px"><span style="text-align:left">Once completed, a new public IP address entry will appear in the Floating IPs.</span></span></p>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 30.6149068322981px; height: 31px; left: 80px; top: 490px;" data-block-id="a821e4c4be3b39d5c0804414928b757e"><div class="sl-block-content" style="z-index: 14;"><img src="deck/997104-BlueIcon1.png" style="visibility: visible;" data-natural-width="159" data-natural-height="161"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 30.6149068322981px; height: 31px; left: 80px; top: 546px;" data-block-id="0e2bc6faecc89d3770079c6c3a9e5581"><div class="sl-block-content" style="z-index: 15;"><img src="deck/997107-BlueIcon2.png" style="visibility: visible;" data-natural-width="159" data-natural-height="161"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 598px; height: 381.630990415336px; left: 181px; top: 64px;" data-block-id="4e46b86ce89e8a834e8da92bf2d6a2ae"><div class="sl-block-content" style="z-index: 16;"><img src="deck/1009448-access_security_floating_ip_allocated.png" style="visibility: visible;" data-natural-width="1252" data-natural-height="799"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 669px; left: 121px; top: 538px;" data-block-id="deda2fc4845e2200d3d54e22bfd5eba1"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 17; color: rgb(0, 0, 0);">
+<p style="color:rgb(0, 0, 0); text-align:left"><span style="font-size:16px"><span style="text-align:left">To associate the public IP address to an instance, select </span><strong>Associate</strong><span style="text-align:left">.</span></span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 669px; left: 148px; top: 502px;" data-block-id="1b3ca993bceada705b85db2df22ed2a9"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 18; color: rgb(102, 102, 102);">
+<p style="text-align:left"><em><span style="font-size:16px"><span style="color:rgb(128, 128, 128); text-align:left">The value in the “Instance” column should be a “-“.</span></span></em></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 669px; left: 148px; top: 560px;" data-block-id="eeb2ed6860635ac6b6b2338a843e6112"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 20; color: rgb(102, 102, 102);">
+<p style="text-align:left"><em><span style="font-size:16px"><span style="color:rgb(128, 128, 128); text-align:left">A pop-up window will appear.</span></span></em></p>
+</div></div></section><section data-background-size="initial"><div class="sl-block" data-block-type="text" style="width: 798px; left: 83px; top: -37px; height: auto;" data-block-id="5edf03f8fe2b8284bcc553612f69125a">
+    <div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 13; color: rgb(0, 30, 130);">
+<h1><span style="font-size:32px">Add a Public IP Address. Step Four.</span></h1>
+</div>
+</div>
+<div class="sl-block" data-block-type="image" style="width: 326.261780104712px; height: 108px; left: 741px; top: 698px;" data-block-id="8930c971bba3cd6d9cb3e37f63101186"><div class="sl-block-content" style="z-index: 11;"><img src="deck/985855-cloud_practice_white.png" style="visibility: visible;" data-natural-width="577" data-natural-height="191"></div></div>
+<div class="sl-block" data-block-type="shape" style="width: 960px; height: 700px; left: 0px; top: 0px;" data-block-id="8e47c0175389bb81126cf3f8c99cfe69"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(255, 255, 255)" data-shape-stretch="true" style="z-index: 12;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 960 700"><rect width="960" height="700" class="shape-element" fill="rgb(255, 255, 255)"></rect></svg></div></div>
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 669px; left: 121px; top: 482px;" data-block-id="c71781c0a4f2ec8e427641b89c5434b8"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14; color: rgb(0, 0, 0);">
+<p style="text-align:left"><span style="font-size:16px"><span style="text-align:left">In the IP Address pull-down menu, select the newly allocated public IP address.</span></span></p>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 30.6149068322981px; height: 31px; left: 80px; top: 490px;" data-block-id="74c90e75a98ec2d33b5024d9df413245"><div class="sl-block-content" style="z-index: 15;"><img src="deck/997104-BlueIcon1.png" style="visibility: visible;" data-natural-width="159" data-natural-height="161"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 30.6149068322981px; height: 31px; left: 80px; top: 546px;" data-block-id="6055b5970508d92c5c822abc2010bc92"><div class="sl-block-content" style="z-index: 16;"><img src="deck/997107-BlueIcon2.png" style="visibility: visible;" data-natural-width="159" data-natural-height="161"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 598px; height: 381.546012269939px; left: 181px; top: 64px;" data-block-id="a757e8030f60d1d8838e22415f94a83b"><div class="sl-block-content" style="z-index: 17;"><img src="deck/1009451-access_security_floating_ip_associate.png" style="visibility: visible;" data-natural-width="1304" data-natural-height="832"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 669px; left: 121px; top: 541px;" data-block-id="cccbde9596897dd4b7c22410b12f3399"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 18; color: rgb(0, 0, 0);">
+<p style="color:rgb(0, 0, 0)"><span style="font-size:16px">In the Port to be associated pull-down menu, select the private IP address for the instance.</span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 669px; left: 148px; top: 502px;" data-block-id="59ed6156f43644d7681790dd1772a140"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 19; color: rgb(102, 102, 102);">
+<p style="text-align:left"><span style="font-size:16px"><em><span style="color:rgb(128, 128, 128); text-align:left">There will only be one IP address to select.</span></em></span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 669px; left: 121px; top: 599px;" data-block-id="31cc77c1dedbbddad007df24e0fd4bfc"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 21; color: rgb(0, 0, 0);">
+<p style="color:rgb(0, 0, 0); text-align:left"><span style="font-size:16px"><span style="text-align:left">Select </span><strong>Allocate IP</strong><span style="text-align:left"> to allocate the IP address to the project.</span></span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 669px; left: 148px; top: 619px;" data-block-id="28a8ee49ee2f5a496104822c96f6ec55"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 22; color: rgb(102, 102, 102);">
+<p style="text-align:left"><em><span style="font-size:16px"><span style="color:rgb(128, 128, 128); text-align:left">You will be returned to the Floating IPs view.</span></span></em></p>
+</div></div>
+<div class="sl-block" data-block-type="image" data-block-id="449b9aea94a8074e68803b989bf0b756" style="min-width: 30px; min-height: 30px; width: 30.6149068322981px; height: 31px; left: 80px; top: 607px;"><div class="sl-block-content" style="z-index: 23;"><img src="deck/1009454-BlueIcon3.png" style="visibility: visible;" data-natural-width="159" data-natural-height="161"></div></div></section><section data-background-size="initial"><div class="sl-block" data-block-type="text" style="width: 798px; left: 83px; top: -37px; height: auto;" data-block-id="4c4c3da5f6aab712a0c14610bae4a139">
+    <div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 12; color: rgb(0, 30, 130);">
+<h1><span style="font-size:32px">Public IP Address Created.</span></h1>
+</div>
+</div>
+<div class="sl-block" data-block-type="image" style="width: 326.261780104712px; height: 108px; left: 741px; top: 698px;" data-block-id="d4fd035416dd122061f5ea40fb1d973e"><div class="sl-block-content" style="z-index: 10;"><img src="deck/985855-cloud_practice_white.png" style="visibility: visible;" data-natural-width="577" data-natural-height="191"></div></div>
+<div class="sl-block" data-block-type="shape" style="width: 960px; height: 700px; left: 0px; top: 0px;" data-block-id="62235cc7724a8118b3d87caa285a8e7e"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(255, 255, 255)" data-shape-stretch="true" style="z-index: 11;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 960 700"><rect width="960" height="700" class="shape-element" fill="rgb(255, 255, 255)"></rect></svg></div></div>
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 669px; left: 121px; top: 482px;" data-block-id="7a4ae4b5650b2f572b871954ff381ddb"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; color: rgb(0, 0, 0);">
+<p style="color: rgb(0, 0, 0); text-align: left;"><span style="font-size:16px">Once completed, the value in the “Instance” column should be a “web-app-instance”.</span></p>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 30.6149068322981px; height: 31px; left: 80px; top: 490px;" data-block-id="5d625be58627d94483557281daf68e18"><div class="sl-block-content" style="z-index: 14;"><img src="deck/997104-BlueIcon1.png" style="visibility: visible;" data-natural-width="159" data-natural-height="161"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 30.6149068322981px; height: 31px; left: 80px; top: 546px;" data-block-id="586942c97608dcc7df505cc1073f85cd"><div class="sl-block-content" style="z-index: 15;"><img src="deck/997107-BlueIcon2.png" style="visibility: visible;" data-natural-width="159" data-natural-height="161"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 598px; height: 382.176804541768px; left: 181px; top: 64px;" data-block-id="78e8a5b278982c5e55ea3a3ee2ca20e7"><div class="sl-block-content" style="z-index: 16;"><img src="deck/1009460-access_security_floating_ip_associated.png" style="visibility: visible;" data-natural-width="1233" data-natural-height="788"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 669px; left: 121px; top: 541px;" data-block-id="5ee19f3eda0a243ccd7e5c84f2e5a0a7"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 17; color: rgb(0, 0, 0);">
+<p style="color:rgb(0, 0, 0); text-align:left"><span style="font-size:16px"><span style="text-align:left">You can now view your creation! Open a new tab in your browser and enter the IP address.</span></span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 724px; left: 148px; top: 560px;" data-block-id="26ffa7ba19df137ae0cac86ed797a87a"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 20; color: rgb(102, 102, 102);">
+<p style="text-align:left"><em><span style="font-size:16px"><span style="color:rgb(128, 128, 128); text-align:left">Give the site a few minutes to set up. Hit refresh a few times if the site is not immediately available.</span></span></em></p>
+</div></div></section><section data-background-size="initial"><div class="sl-block" data-block-type="text" style="width: 798px; left: 82px; top: -35px; height: auto;" data-block-id="5627d662595ba5323d695b6ebe7c63b1">
+    <div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 13; color: rgb(0, 30, 130);" dir="ui">
+<h1><span style="font-size:32px; line-height:41.5999984741211px">Just checking...</span></h1>
+</div>
+</div>
+<div class="sl-block" data-block-type="image" style="width: 326.261780104712px; height: 108px; left: 741px; top: 700px;" data-block-id="766b8d192cf30ce505ecbbfe990ba687"><div class="sl-block-content" style="z-index: 11;"><img src="deck/985855-cloud_practice_white.png" style="visibility: visible;" data-natural-width="577" data-natural-height="191"></div></div>
+<div class="sl-block" data-block-type="shape" style="width: 960px; height: 700px; left: 0px; top: 0px;" data-block-id="03e1ad00d647252a12e5f308afd27445"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(255, 255, 255)" data-shape-stretch="true" style="z-index: 12;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 960 700"><rect width="960" height="700" class="shape-element" fill="rgb(255, 255, 255)"></rect></svg></div></div>
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 583px; left: 137px; top: 91px;" data-block-id="456c574bc59892862c662a2c84a4c536"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15; color: rgb(0, 0, 0);">
+<p style="text-align:left"><span style="font-size:16px; line-height:20.7999992370605px">If things didn't go to plan, click <span style="font-size:32px"><a href="http://203.35.91.27/index.html" target="_blank">here </a></span>to see one we created earlier</span></p>
+</div></div>
+
+<div class="sl-block" data-block-type="image" style="width: 30.6149068322981px; height: 31px; left: 101px; top: 99px;" data-block-id="a131c6ff655d78521db7f5661df269c8"><div class="sl-block-content" style="z-index: 18;"><img src="deck/997104-BlueIcon1.png" style="visibility: visible;" data-natural-width="159" data-natural-height="161"></div></div></section><section><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 270px; height: auto;" data-block-id="db9eadf435e5e509a7585f440e17849e"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text">
+<h1>The End.</h1>
+</div></div></section>
+			</div>
+		</div>
+
+		<script>
+			var SLConfig = {"deck": {"id":325826,"slug":"deck","title":"deck","description":"","visibility":"self","published_at":null,"sanitize_messages":null,"thumbnail_url":"https://s3.amazonaws.com/media-p.slid.es/thumbnails/timc/396561/deck.jpg","view_count":13,"user":{"id":266061,"username":"timc","name":"","email":"tim.j.conrad@gmail.com","description":"","thumbnail_url":"https://www.gravatar.com/avatar/b8203dcae581b2dcc7babcb70c36b8c9?s=140\u0026d=https%3A%2F%2Fs3.amazonaws.com%2Fstatic.slid.es%2Fimages%2Fdefault-profile-picture.png","pro":true,"enterprise":false,"enterprise_manager":false,"notify_on_receipt":false,"billing_address":null,"editor_tutorial_completed":true,"settings":{"id":86693,"present_controls":true,"present_upsizing":true,"editor_grid":true,"editor_snap":true,"developer_mode":true},"registered":true},"background_transition":"convex","transition":"default","theme_id":null,"theme_font":"helvetica","theme_color":"white-blue","auto_slide_interval":0,"comments_enabled":true,"forking_enabled":false,"rolling_links":false,"center":false,"should_loop":false,"rtl":false,"version":2,"notes":{}}};
+		</script>
+
+		<script>
+			SLConfig.current_user = {
+				name: "",
+				username: "timc",
+				pro: true
+			};
+		</script>
+
+		<script src="lib/head.min.js"></script>
+		<script src="lib/reveal.min.js"></script>
+		<script>
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				mouseWheel: false,
+
+				autoSlide: SLConfig.deck.auto_slide_interval || 0,
+				autoSlideStoppable: true,
+
+				rolling_links: SLConfig.deck.rolling_links || true,
+				center: SLConfig.deck.center || false,
+				loop: SLConfig.deck.should_loop || false,
+				rtl: SLConfig.deck.rtl || false,
+
+				transition: SLConfig.deck.transition,
+				backgroundTransition: SLConfig.deck.background_transition,
+
+				dependencies: [
+					{ src: 'lib/reveal-plugins/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'lib/reveal-plugins/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'lib/reveal-plugins/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'lib/reveal-plugins/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+			if( SLConfig.deck.notes ) {
+				[].forEach.call( document.querySelectorAll( '.reveal .slides section' ), function( slide ) {
+
+					var value = SLConfig.deck.notes[ slide.getAttribute( 'data-id' ) ];
+					if( value && typeof value === 'string' ) {
+						slide.setAttribute( 'data-notes', value );
+					}
+
+				} );
+			}
+		</script>
+
+		
+
+	</body>
+</html>
