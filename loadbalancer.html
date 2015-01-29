@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+	<html class="base fullscreen loaded">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>Copy of CCS_instructions: Slides</title>
+		<meta name="description" content="Slides">
+
+		<link rel="stylesheet" type="text/css" href="lib/offline-v2.css">
+		<style id="user-css-output" type="text/css">.reveal {
+  /*
+/* IE10+ */
+  background-image: -ms-linear-gradient(top, #5a1991 0%, #00baff 100%);
+  /* Mozilla Firefox */
+  background-image: -moz-linear-gradient(top, #5a1991 0%, #00baff 100%);
+  /* Opera */
+  background-image: -o-linear-gradient(top, #5a1991 0%, #00baff 100%);
+  /* Webkit (Safari/Chrome 10) */
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #5a1991), color-stop(100, #00baff));
+  /* Webkit (Chrome 11+) */
+  background-image: -webkit-linear-gradient(top, #5a1991 0%, #00baff 100%);
+  /* W3C Markup */
+  background-image: linear-gradient(to bottom, #5a1991 0%, #00baff 100%);
+}
+.reveal .slides {
+  color: #ffffff;
+}
+</style>
+	</head>
+	<body class="reveal-viewport theme-font-helvetica theme-color-white-blue">
+		<div class="reveal">
+			<div class="slides">
+				<section data-background-size="initial"><div class="sl-block" data-block-type="text" style="width: 798px; left: 82px; top: 88px; height: auto;" data-block-id="bf3cafe282760dd9fa904e4cffea8e75">
+    <div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 12; color: rgb(0, 30, 130);">
+<p style="text-align:left"><span style="font-size:48px"><span style="text-align:start">Now that we have created a web site using a single web server, we will extend the solution to include a second web server and a load balancer.</span> </span></p>
+</div>
+</div>
+<div class="sl-block" data-block-type="image" style="width: 326.261780104712px; height: 108px; left: 741px; top: 700px;" data-block-id="7ea75346070d17778a6f657e036f55f4">
+    <div class="sl-block-content" style="z-index: 10;">
+        <img src="ccs_instructions-3/985855-cloud_practice_white.png" style="visibility: visible;" data-natural-width="577" data-natural-height="191">
+        </div>
+    </div>
+    <div class="sl-block" data-block-type="shape" style="width: 960px; height: 700px; left: 0px; top: 1px;" data-block-id="0ac4c417131fffd8bb213416b959a2bf">
+        <div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(255, 255, 255)" data-shape-stretch="true" style="z-index: 11;">
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 960 700"><rect width="960" height="700" class="shape-element" fill="rgb(255, 255, 255)"></rect></svg>
+        </div>
+    </div>
+
+
+
+
+
+
+
+</section><section data-background-size="initial"><div class="sl-block" data-block-type="text" style="width: 798px; left: 80px; top: 89px; height: auto;" data-block-id="20b1c00eee2bc8de3f5f414bc9760416">
+    <div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 12; color: rgb(0, 30, 130);" dir="ui">
+<p style="text-align:left"><span style="font-size:48px">When web surfers attempt to access our web site, the load balancer will spread the requests across our web instances.</span></p>
+</div>
+</div>
+<div class="sl-block" data-block-type="image" style="width: 326.261780104712px; height: 108px; left: 741px; top: 700px;" data-block-id="3cd1572038f4a9a58d82318361071606">
+    <div class="sl-block-content" style="z-index: 10;">
+        <img src="ccs_instructions-3/985855-cloud_practice_white.png" style="visibility: visible;" data-natural-width="577" data-natural-height="191">
+        </div>
+    </div>
+    <div class="sl-block" data-block-type="shape" style="width: 960px; height: 700px; left: 0px; top: 1px;" data-block-id="e7970d0b11c23c5c173d7f8a2ae59755">
+        <div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(255, 255, 255)" data-shape-stretch="true" style="z-index: 11;">
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 960 700"><rect width="960" height="700" class="shape-element" fill="rgb(255, 255, 255)"></rect></svg>
+        </div>
+    </div>
+
+
+
+
+
+
+
+</section><section data-background-size="initial"><div class="sl-block" data-block-type="text" style="width: 798px; left: 83px; top: -35px; height: auto;" data-block-id="070e2fae4dbe423e453ac5c146511754">
+    <div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 12; color: rgb(0, 30, 130);">
+<h1><span style="font-size:32px">Create a Load Balancer.</span></h1>
+</div>
+</div>
+<div class="sl-block" data-block-type="image" style="width: 326.261780104712px; height: 108px; left: 741px; top: 700px;" data-block-id="6334340869a44380c3b1d5566e8c50fb"><div class="sl-block-content" style="z-index: 10;"><img src="ccs_instructions-3/985855-cloud_practice_white.png" style="visibility: visible;" data-natural-width="577" data-natural-height="191"></div></div>
+<div class="sl-block" data-block-type="shape" style="width: 960px; height: 700px; left: 0px; top: 1px;" data-block-id="4cd997228c04a00642dcd89649785c96"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(255, 255, 255)" data-shape-stretch="true" style="z-index: 11;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 960 700"><rect width="960" height="700" class="shape-element" fill="rgb(255, 255, 255)"></rect></svg></div></div>
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 669px; left: 121px; top: 484px;" data-block-id="d22ed43a8c1576a0cf7f5953cc768537"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; color: rgb(0, 0, 0);">
+<p style="text-align:left"><span style="font-size:16px">To add a load balancer, select the <strong>Load Balancers</strong> link in the navigation pane.</span></p>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 30.6149068322981px; height: 31px; left: 80px; top: 492px;" data-block-id="6638a8a85a6e0e642e20303b0cc7202d"><div class="sl-block-content" style="z-index: 14;"><img src="ccs_instructions-3/997104-BlueIcon1.png" style="visibility: visible;" data-natural-width="159" data-natural-height="161"></div></div>
+
+<div class="sl-block" data-block-type="image" style="width: 598px; height: 382.176804541768px; left: 181px; top: 63.5px;" data-block-id="da6a858dab8e8dc0b5ca2cedcf3031fd"><div class="sl-block-content" style="z-index: 18;"><img src="ccs_instructions-3/1025944-lb_create.png" style="visibility: visible;" data-natural-width="1233" data-natural-height="788"></div></div>
+
+</section><section data-background-size="initial"><div class="sl-block" data-block-type="text" style="width: 798px; left: 83px; top: -35px; height: auto;" data-block-id="2f508ec71133fc3d2ab9da45b0aebca2">
+    <div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 12; color: rgb(0, 30, 130);">
+<h1><span style="font-size:32px">Add a Load Balancer Pool.</span></h1>
+</div>
+</div>
+<div class="sl-block" data-block-type="image" style="width: 326.261780104712px; height: 108px; left: 741px; top: 700px;" data-block-id="28681c21cc4d60caaae30d2e715a9eda"><div class="sl-block-content" style="z-index: 10;"><img src="ccs_instructions-3/985855-cloud_practice_white.png" style="visibility: visible;" data-natural-width="577" data-natural-height="191"></div></div>
+<div class="sl-block" data-block-type="shape" style="width: 960px; height: 700px; left: 0px; top: 0px;" data-block-id="a2f7484555abd928cde3ea2a6e6e059e"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(255, 255, 255)" data-shape-stretch="true" style="z-index: 11;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 960 700"><rect width="960" height="700" class="shape-element" fill="rgb(255, 255, 255)"></rect></svg></div></div>
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 739px; left: 121px; top: 484px;" data-block-id="002c06a0c5d0d28d6d9c2787502de66d"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; color: rgb(0, 0, 0);">
+<p style="text-align:left"><span style="font-size:16px"><span style="text-align:left">The main view lists the Load Balancer Pools for this project. At present, the list should be empty.</span></span></p>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 30.6149068322981px; height: 31px; left: 80px; top: 492px;" data-block-id="7649c612003e0ffc50cfc7fa93d34fd2"><div class="sl-block-content" style="z-index: 14;"><img src="ccs_instructions-3/997104-BlueIcon1.png" style="visibility: visible;" data-natural-width="159" data-natural-height="161"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 30.6149068322981px; height: 31px; left: 80px; top: 548px;" data-block-id="e879edee81dcf63cddffb6c91a384bcc"><div class="sl-block-content" style="z-index: 15;"><img src="ccs_instructions-3/997107-BlueIcon2.png" style="visibility: visible;" data-natural-width="159" data-natural-height="161"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 598px; height: 381.731878409977px; left: 181px; top: 64px;" data-block-id="a815628abb80cdf0644b5a719f2dac24"><div class="sl-block-content" style="z-index: 16;"><img src="ccs_instructions-3/1025948-lb_pools.png" style="visibility: visible;" data-natural-width="1283" data-natural-height="819"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 669px; left: 121px; top: 540px;" data-block-id="3e7b8b4c8ce292918d251e8f914f859d"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 17; color: rgb(0, 0, 0);">
+<p style="color:rgb(0, 0, 0); text-align:left"><span style="font-size:16px">To create a new Load Balancer Pool, select <strong>+ Add Pool</strong>. </span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 669px; left: 146px; top: 504px;" data-block-id="c00f480ee124572fd6346614d9f2501e"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 18; color: rgb(102, 102, 102);">
+<p style="text-align:left"><span style="font-size:16px"><em><span style="text-align:left">NOTE: The Pool is a container that holds instances</span></em></span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 669px; left: 146px; top: 560px;" data-block-id="ac1f21b89010612bb337916edd9cca5f"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 20; color: rgb(102, 102, 102);">
+<p style="text-align:left"><span style="font-size:16px"><em><span style="text-align:left">A pop-up window will appear.</span></em></span></p>
+</div></div></section><section data-background-size="initial"><div class="sl-block" data-block-type="text" style="width: 798px; left: 83px; top: -35px; height: auto;" data-block-id="bf628515133ef57dc21444ccd6839f6d">
+    <div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 12; color: rgb(0, 30, 130);">
+<h1><span style="font-size:32px">Add a Load Balancer Pool. Step One.</span></h1>
+</div>
+</div>
+<div class="sl-block" data-block-type="image" style="width: 326.261780104712px; height: 108px; left: 741px; top: 700px;" data-block-id="ee3ddf92f817e9649384fa3e760e33dc"><div class="sl-block-content" style="z-index: 10;"><img src="ccs_instructions-3/985855-cloud_practice_white.png" style="visibility: visible;" data-natural-width="577" data-natural-height="191"></div></div>
+<div class="sl-block" data-block-type="shape" style="width: 960px; height: 700px; left: 0px; top: 1px;" data-block-id="351752453013bd78b2636e8bc3a80f10"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(255, 255, 255)" data-shape-stretch="true" style="z-index: 11;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 960 700"><rect width="960" height="700" class="shape-element" fill="rgb(255, 255, 255)"></rect></svg></div></div>
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 798px; left: 121px; top: 441px;" data-block-id="b80b25f27cf684c61142b56e16407636"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; color: rgb(0, 0, 0);">
+<p style="color: rgb(0, 0, 0); text-align: left;"><span style="font-size:16px">In the Name field, type a name for your pool. A good choice is <strong>web-pool</strong></span></p>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 30.6149068322981px; height: 31px; left: 80px; top: 449px;" data-block-id="329f9c09c33d91dbea9588a5335709f6"><div class="sl-block-content" style="z-index: 14;"><img src="ccs_instructions-3/997104-BlueIcon1.png" style="visibility: visible;" data-natural-width="159" data-natural-height="161"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 30.6149068322981px; height: 31px; left: 80px; top: 497px;" data-block-id="50b191aa57426a556d69c0596a70f2ba"><div class="sl-block-content" style="z-index: 15;"><img src="ccs_instructions-3/997107-BlueIcon2.png" style="visibility: visible;" data-natural-width="159" data-natural-height="161"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 30.6149068322981px; height: 31px; left: 80px; top: 548px;" data-block-id="f2ff33c2f9af48557b97e46d1c3a25fb"><div class="sl-block-content" style="z-index: 16;"><img src="ccs_instructions-3/997111-BlueIcon3.png" style="visibility: visible;" data-natural-width="159" data-natural-height="161"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 30.6149068322981px; height: 31px; left: 80px; top: 596px;" data-block-id="a8d8623ea5191ebfbfa4539852ec8bba"><div class="sl-block-content" style="z-index: 17;"><img src="ccs_instructions-3/997114-BlueIcon4.png" style="visibility: visible;" data-natural-width="159" data-natural-height="161"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 520.267523364486px; height: 391px; left: 220px; top: 50px;" data-block-id="c83321c0aaa9d2696546254d3d061b80"><div class="sl-block-content" style="z-index: 18;"><img src="ccs_instructions-3/1025957-lb_add_pool.png" style="visibility: visible;" data-natural-width="1139" data-natural-height="856"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 669px; left: 121px; top: 487px;" data-block-id="91a94ac7996f241b9b70ee124e8c330e"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 19; color: rgb(0, 0, 0);">
+<p style="text-align:left"><span style="font-size:16px">In the Subnet drop-down menu, select the private network.</span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 669px; left: 121px; top: 539px;" data-block-id="51360875958eea690572e3a816075a36"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 20; color: rgb(0, 0, 0);">
+<p style="color: rgb(0, 0, 0); text-align: left;"><span style="font-size:16px">In the Protocol drop-down menu, select <strong>HTTP</strong></span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 766px; left: 121px; top: 588px;" data-block-id="162b3095105df1da38ec640571f8ce47"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 23; color: rgb(0, 0, 0);">
+<p style="text-align:left"><span style="font-size:16px"><span style="text-align:left">In the Load Balancing Method drop-down menu, select </span><strong>ROUND_ROBIN</strong></span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 669px; left: 160px; top: 611px;" data-block-id="1bb21ddcf42436713372c81de0788e06"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 24; color: rgb(102, 102, 102);">
+<p style="text-align:left"><em><span style="font-size:16px">All other fields can be left to their default values.</span></em></p>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 31px; height: 31.3899371069182px; left: 80px; top: 650.610046386719px;" data-block-id="a3fad89b595df984cf950e637210a971"><div class="sl-block-content" style="z-index: 25;"><img src="ccs_instructions-3/997998-BlueIcon5.png" style="visibility: visible;" data-natural-width="159" data-natural-height="161"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 798px; left: 121px; top: 643px;" data-block-id="6db3d99f951144063062ef7b6078f0f4"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 26; color: rgb(0, 0, 0);">
+<p style="text-align:left"><span style="font-size:16px"><span style="text-align:left">Once completed, select </span><strong>Add</strong><span style="text-align:left"> to add your Load Balancer Pool.</span></span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 669px; left: 160px; top: 507px;" data-block-id="12b1a1e8c8a8dd95e19c6fdbbe8fdfea"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 27; color: rgb(102, 102, 102);">
+<p style="text-align:left"><em><span style="font-size:16px">The private network should be on the only choice in the drop-down list.</span></em></p>
+</div></div></section><section data-background-size="initial"><div class="sl-block" data-block-type="text" style="width: 798px; left: 83px; top: -35px; height: auto;" data-block-id="c7395cb30266778e737dbc100e0d0845">
+    <div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 12; color: rgb(0, 30, 130);">
+<h1><span style="font-size:32px">Load Balancer Pool Created.</span></h1>
+</div>
+</div>
+<div class="sl-block" data-block-type="image" style="width: 326.261780104712px; height: 108px; left: 741px; top: 700px;" data-block-id="1a4c972ab43a0418ec02c16d6d338c4b"><div class="sl-block-content" style="z-index: 10;"><img src="ccs_instructions-3/985855-cloud_practice_white.png" style="visibility: visible;" data-natural-width="577" data-natural-height="191"></div></div>
+<div class="sl-block" data-block-type="shape" style="width: 960px; height: 700px; left: 0px; top: 1px;" data-block-id="4bcee35363b7607df04ff6c5319b04c9"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(255, 255, 255)" data-shape-stretch="true" style="z-index: 11;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 960 700"><rect width="960" height="700" class="shape-element" fill="rgb(255, 255, 255)"></rect></svg></div></div>
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 798px; left: 121px; top: 441px;" data-block-id="171c950fea1dccb77c338efd3c360128"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; color: rgb(0, 0, 0);">
+<p style="color:rgb(0, 0, 0); text-align:left"><span style="font-size:16px"><span style="text-align:left">Once completed, a new pool entry will appear in the Pools list.</span></span></p>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 30.6149068322981px; height: 31px; left: 80px; top: 449px;" data-block-id="3e6020e5b41da0a76c9571735526ab80"><div class="sl-block-content" style="z-index: 14;"><img src="ccs_instructions-3/997104-BlueIcon1.png" style="visibility: visible;" data-natural-width="159" data-natural-height="161"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 30.6149068322981px; height: 31px; left: 80px; top: 497px;" data-block-id="575ff96898a5a64f2d687a07a4983dab"><div class="sl-block-content" style="z-index: 15;"><img src="ccs_instructions-3/997107-BlueIcon2.png" style="visibility: visible;" data-natural-width="159" data-natural-height="161"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 520px; height: 391.534569983137px; left: 220px; top: 50px;" data-block-id="2083a97d37458667e14cbf93f83fd0c4"><div class="sl-block-content" style="z-index: 17;"><img src="ccs_instructions-3/1025970-lb_add_pool_done.png" style="visibility: visible;" data-natural-width="1186" data-natural-height="893"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 669px; left: 121px; top: 487px;" data-block-id="14c9058b01673002832b0d632a5e46e3"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 18; color: rgb(0, 0, 0);">
+<p style="text-align:left"><span style="font-size:16px"><span style="text-align:left">The next step is to add a VIP to the pool. To do this, select </span><strong>More</strong><span style="text-align:left"> then </span><strong>Add VIP</strong><span style="text-align:left">.</span></span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 708px; left: 78.9999923706055px; top: 539px;" data-block-id="df221c547d7b196bafd0fc3bc4a6572f"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 19; color: rgb(0, 0, 0);">
+<p style="color: rgb(0, 0, 0); text-align: left;"><span style="font-size:16px">NOTE: The VIP is the IP address that users will type into their web browser to reach your web site.</span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 669px; left: 160px; top: 507px;" data-block-id="04738e2c730515b36047b3fa5ae9dd1f"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 20; color: rgb(102, 102, 102);">
+<p style="text-align:left"><span style="font-size:16px"><em><span style="color:rgb(128, 128, 128); text-align:left">A pop-up window will appear.</span></em></span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 669px; left: 160px; top: 461px;" data-block-id="4b3ed139a7935cd112084e59b8dfc3e7"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 22; color: rgb(102, 102, 102);">
+<p style="text-align:left"><span style="font-size:16px"><em><span style="color:rgb(128, 128, 128); text-align:left">The name should be </span><strong>web-pool</strong></em></span></p>
+</div></div></section><section data-background-size="initial"><div class="sl-block" data-block-type="text" style="width: 798px; left: 83px; top: -35px; height: auto;" data-block-id="99cde06f33b9c2119d0eb21d39bf5689">
+    <div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 13; color: rgb(0, 30, 130);">
+<h1><span style="font-size:32px">Add a VIP. Step One.</span></h1>
+</div>
+</div>
+<div class="sl-block" data-block-type="image" style="width: 326.261780104712px; height: 108px; left: 741px; top: 700px;" data-block-id="045bb891c701de0c1d8c5a9dbd803fb3"><div class="sl-block-content" style="z-index: 11;"><img src="ccs_instructions-3/985855-cloud_practice_white.png" style="visibility: visible;" data-natural-width="577" data-natural-height="191"></div></div>
+<div class="sl-block" data-block-type="shape" style="width: 960px; height: 700px; left: 0px; top: 1px;" data-block-id="b630fee9e1899dd27eb51c452141b9db"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(255, 255, 255)" data-shape-stretch="true" style="z-index: 12;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 960 700"><rect width="960" height="700" class="shape-element" fill="rgb(255, 255, 255)"></rect></svg></div></div>
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 798px; left: 121px; top: 462px;" data-block-id="5196a49aa7074693b1b7a73dd3c28601"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14; color: rgb(0, 0, 0);">
+<p style="color: rgb(0, 0, 0); text-align: left;"><span style="font-size:16px">In the Name field, type a name for your VIP. A good choice is <strong>web-vip</strong>.</span></p>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 30.6149068322981px; height: 31px; left: 80px; top: 470px;" data-block-id="b86ba1b0626e48f85f720033472b4f89"><div class="sl-block-content" style="z-index: 15;"><img src="ccs_instructions-3/997104-BlueIcon1.png" style="visibility: visible;" data-natural-width="159" data-natural-height="161"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 30.6149068322981px; height: 31px; left: 80px; top: 509px;" data-block-id="f1e1a81a8318eff306526566aa8ec9ed"><div class="sl-block-content" style="z-index: 16;"><img src="ccs_instructions-3/997107-BlueIcon2.png" style="visibility: visible;" data-natural-width="159" data-natural-height="161"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 30.6149068322981px; height: 31px; left: 80px; top: 546px;" data-block-id="def78147340147e2b1ae8a85b2188a7b"><div class="sl-block-content" style="z-index: 17;"><img src="ccs_instructions-3/997111-BlueIcon3.png" style="visibility: visible;" data-natural-width="159" data-natural-height="161"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 30.6149068322981px; height: 31px; left: 81.0000076293945px; top: 584px;" data-block-id="74af67fa2fa41f4c3ffef0760463de61"><div class="sl-block-content" style="z-index: 18;"><img src="ccs_instructions-3/997114-BlueIcon4.png" style="visibility: visible;" data-natural-width="159" data-natural-height="161"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 500px; height: 409.990574929312px; left: 230px; top: 52px;" data-block-id="2e41d407cbad793948f33c8e3c82d6fd"><div class="sl-block-content" style="z-index: 19;"><img src="ccs_instructions-3/1025977-lb_add_vip.png" style="visibility: visible;" data-natural-width="1061" data-natural-height="870"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 760px; left: 121px; top: 499px;" data-block-id="508d8c3a2d2707026cfa90f4b48238ac"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 20; color: rgb(0, 0, 0);">
+<p style="color: rgb(0, 0, 0); text-align: left;"><span style="font-size:16px">In the <strong>Specify a free IP address ...</strong> field, type a free IP address. A good choice is <strong>192.168.55.35</strong>.</span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 669px; left: 121px; top: 537px;" data-block-id="0e29183438edb7cffb0475028b16ac61"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 21; color: rgb(0, 0, 0);">
+<p style="color: rgb(0, 0, 0); text-align: left;"><span style="font-size:16px">In the Protocol Port field, type <strong>80</strong></span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 766px; left: 121px; top: 621px;" data-block-id="71e3bb7ed0481f9d1d250f689a6494d7"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 22; color: rgb(0, 0, 0);">
+<p style="color: rgb(0, 0, 0); text-align: left;"><span style="font-size:16px">In the Session Persistence drop-down menu, select <strong>SOURCE_IP</strong></span></p>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 31px; height: 31.3899371069182px; left: 80px; top: 623.609985351563px;" data-block-id="3700543f207f5e5679cbc750df3b2553"><div class="sl-block-content" style="z-index: 24;"><img src="ccs_instructions-3/997998-BlueIcon5.png" style="visibility: visible;" data-natural-width="159" data-natural-height="161"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 798px; left: 121px; top: 655.000061035156px;" data-block-id="f037620ceadaf0dea953fea3d5745223"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 25; color: rgb(0, 0, 0);">
+<p style="text-align:left"><span style="font-size:16px"><span style="text-align:left">Once completed, select </span><strong>Add</strong><span style="text-align:left"> to add your VIP. You will be returned to the Load Balancer view.</span></span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 669px; left: 122px; top: 579px;" data-block-id="45fcf3ff3325983200cd8933b68555b1"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 26; color: rgb(0, 0, 0);">
+<p style="color: rgb(0, 0, 0); text-align: left;"><span style="font-size:16px">In the Protocol drop-down menu, select <strong>HTTP</strong></span></p>
+</div></div>
+<div class="sl-block" data-block-type="image" data-block-id="5da3725093ad32a1f2511b66e028c3eb" style="min-width: 30px; min-height: 30px; width: 31.6024844720497px; height: 32px; left: 80px; top: 662.000061035156px;"><div class="sl-block-content" style="z-index: 27;"><img src="ccs_instructions-3/1025982-BlueIcon6.png" data-natural-width="159" data-natural-height="161" style="visibility: visible;"></div></div></section><section data-background-size="initial"><div class="sl-block" data-block-type="text" style="width: 798px; left: 83px; top: -35px; height: auto;" data-block-id="876a8ff41b18651bdac1bc81f72d385a">
+    <div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 12; color: rgb(0, 30, 130);">
+<h1><span style="font-size:32px; line-height:46.2222213745117px">VIP Added.</span></h1>
+</div>
+</div>
+<div class="sl-block" data-block-type="image" style="width: 326.261780104712px; height: 108px; left: 741px; top: 700px;" data-block-id="4cf4bd6a7482a4f97ecb574effd0e2db"><div class="sl-block-content" style="z-index: 10;"><img src="ccs_instructions-3/985855-cloud_practice_white.png" style="visibility: visible;" data-natural-width="577" data-natural-height="191"></div></div>
+<div class="sl-block" data-block-type="shape" style="width: 960px; height: 700px; left: 0px; top: 1px;" data-block-id="a0ceb06791657a7f09c6670397c8903b"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(255, 255, 255)" data-shape-stretch="true" style="z-index: 11;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 960 700"><rect width="960" height="700" class="shape-element" fill="rgb(255, 255, 255)"></rect></svg></div></div>
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 669px; left: 121px; top: 484px;" data-block-id="7ff69bb89d1467684a2da8a77f1b4e11"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; color: rgb(0, 0, 0);">
+<p style="color: rgb(0, 0, 0); text-align: left;"><span style="font-size:16px">Once completed, the VIP name (<strong>web-vip</strong>) will appear in the <strong>web-pool</strong> Pools entry.</span></p>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 30.6149068322981px; height: 31px; left: 80px; top: 492px;" data-block-id="57c29dfe265948c6847d1efe4432cfaf"><div class="sl-block-content" style="z-index: 14;"><img src="ccs_instructions-3/997104-BlueIcon1.png" style="visibility: visible;" data-natural-width="159" data-natural-height="161"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 30.6149068322981px; height: 31px; left: 80px; top: 548px;" data-block-id="7d2f9a9500f9e5329cac65486ce976ae"><div class="sl-block-content" style="z-index: 15;"><img src="ccs_instructions-3/997107-BlueIcon2.png" style="visibility: visible;" data-natural-width="159" data-natural-height="161"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 552.59584295612px; height: 422px; left: 206px; top: 55px;" data-block-id="bec3041b3a511f3145c16be51feda105"><div class="sl-block-content" style="z-index: 18;"><img src="ccs_instructions-3/1025991-lb_add_vip_added.png" style="visibility: visible;" data-natural-width="1134" data-natural-height="866"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 669px; left: 121px; top: 540px;" data-block-id="42bc2605f1612ce87acf37f2bb7eb458"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 19; color: rgb(0, 0, 0);">
+<p style="color: rgb(0, 0, 0); text-align: left;"><span style="font-size:16px">The next step is to add instance members to the pool. To do this, select the <strong>Members</strong> tab.</span></p>
+</div></div>
+</section><section data-background-size="initial"><div class="sl-block" data-block-type="text" style="width: 798px; left: 83px; top: -37px; height: auto;" data-block-id="910cc4907bb6d3c6bea3c527f4d48fc3">
+    <div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 12; color: rgb(0, 30, 130);">
+<h1><span style="font-size:32px">Add First Pool Member</span></h1>
+</div>
+</div>
+<div class="sl-block" data-block-type="image" style="width: 326.261780104712px; height: 108px; left: 741px; top: 698px;" data-block-id="8e1af613cf780c4ca8c147c37f93277f"><div class="sl-block-content" style="z-index: 10;"><img src="ccs_instructions-3/985855-cloud_practice_white.png" style="visibility: visible;" data-natural-width="577" data-natural-height="191"></div></div>
+<div class="sl-block" data-block-type="shape" style="width: 960px; height: 700px; left: 0px; top: 0px;" data-block-id="f8ad2af2f5b9bab17498d1416e8b4fdb"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(255, 255, 255)" data-shape-stretch="true" style="z-index: 11;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 960 700"><rect width="960" height="700" class="shape-element" fill="rgb(255, 255, 255)"></rect></svg></div></div>
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 669px; left: 121px; top: 516px;" data-block-id="207f319e31d3208d4fd29f8d012272a2"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; color: rgb(0, 0, 0);">
+<p style="text-align:left"><span style="font-size:16px"><span style="text-align:left">The main view lists the instance members in the Load Balancer Pool.</span></span></p>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 30.6149068322981px; height: 31px; left: 80px; top: 524px;" data-block-id="b50b491d948dec9e942893b95a9473f3"><div class="sl-block-content" style="z-index: 14;"><img src="ccs_instructions-3/997104-BlueIcon1.png" style="visibility: visible;" data-natural-width="159" data-natural-height="161"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 30.6149068322981px; height: 31px; left: 80px; top: 580px;" data-block-id="67b8f111ff5fa570bfe554a0702a66cc"><div class="sl-block-content" style="z-index: 15;"><img src="ccs_instructions-3/997107-BlueIcon2.png" style="visibility: visible;" data-natural-width="159" data-natural-height="161"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 554.311926605505px; height: 424px; left: 203px; top: 54px;" data-block-id="5610f8b83fd222a5e29ed5c25dcc2da0"><div class="sl-block-content" style="z-index: 16;"><img src="ccs_instructions-3/1025997-lb_add_member.png" style="visibility: visible;" data-natural-width="1140" data-natural-height="872"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 669px; left: 121px; top: 575px;" data-block-id="3c732757bda1852c79552e7cf9455041"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 17; color: rgb(0, 0, 0);">
+<p style="color:rgb(0, 0, 0); text-align:left"><span style="font-size:16px"><span style="text-align:left">To add a new instance Member to the Load Balancer pool, select </span><strong>+ Add Member</strong><span style="text-align:left">.</span></span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 669px; left: 148px; top: 536px;" data-block-id="cba0babb49bc344782fa6b6b07cf94f4"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 18; color: rgb(102, 102, 102);">
+<p style="text-align:left"><span style="font-size:16px"><em><span style="color:rgb(128, 128, 128); text-align:left">At present, the list should be empty.</span></em></span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 669px; left: 148px; top: 594px;" data-block-id="c97d4d6c291dc732a2d4b81d6baa9485"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 20; color: rgb(102, 102, 102);">
+<p style="text-align:left"><em><span style="font-size:16px"><span style="color:rgb(128, 128, 128); text-align:left">A pop-up window will appear.</span></span></em></p>
+</div></div></section><section data-background-size="initial"><div class="sl-block" data-block-type="text" style="width: 798px; left: 83px; top: -35px; height: auto;" data-block-id="64e1a728b93b71c1124ebc412cede92f">
+    <div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 12; color: rgb(0, 30, 130);">
+<h1><span style="font-size:32px">Add First Pool Member. Step One.</span></h1>
+</div>
+</div>
+<div class="sl-block" data-block-type="image" style="width: 326.261780104712px; height: 108px; left: 741px; top: 700px;" data-block-id="9245b39647afa8bc1ce5f3b7284defee"><div class="sl-block-content" style="z-index: 10;"><img src="ccs_instructions-3/985855-cloud_practice_white.png" style="visibility: visible;" data-natural-width="577" data-natural-height="191"></div></div>
+<div class="sl-block" data-block-type="shape" style="width: 960px; height: 700px; left: 0px; top: 1px;" data-block-id="999efe45a4270e11d2e117129219736b"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(255, 255, 255)" data-shape-stretch="true" style="z-index: 11;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 960 700"><rect width="960" height="700" class="shape-element" fill="rgb(255, 255, 255)"></rect></svg></div></div>
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 798px; left: 121px; top: 487px;" data-block-id="20fcceef66c26b9e5fb18d6c09537b41"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; color: rgb(0, 0, 0);">
+<p style="color: rgb(0, 0, 0); text-align: left;"><span style="font-size:16px">In the Pool drop-down menu, select <strong>web-pool</strong>.</span></p>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 30.6149068322981px; height: 31px; left: 80px; top: 495px;" data-block-id="ea2c2ec2be933f4e31e320f6dde3b16d"><div class="sl-block-content" style="z-index: 15;"><img src="ccs_instructions-3/997104-BlueIcon1.png" style="visibility: visible;" data-natural-width="159" data-natural-height="161"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 30.6149068322981px; height: 31px; left: 80px; top: 543px;" data-block-id="7f9fd1d36cf9d72c91a613edc98e2443"><div class="sl-block-content" style="z-index: 16;"><img src="ccs_instructions-3/997107-BlueIcon2.png" style="visibility: visible;" data-natural-width="159" data-natural-height="161"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 30.6149068322981px; height: 31px; left: 80px; top: 588px;" data-block-id="7e47fa317dc84120bf25d043fcd66620"><div class="sl-block-content" style="z-index: 17;"><img src="ccs_instructions-3/997111-BlueIcon3.png" style="visibility: visible;" data-natural-width="159" data-natural-height="161"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 30.6149068322981px; height: 31px; left: 80px; top: 635px;" data-block-id="999ccc3bd2c46d1883877aa38ac55da7"><div class="sl-block-content" style="z-index: 18;"><img src="ccs_instructions-3/997114-BlueIcon4.png" style="visibility: visible;" data-natural-width="159" data-natural-height="161"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 568.10599078341px; height: 436px; left: 196px; top: 51px;" data-block-id="a276aeea39fc512e8cfec0da2533be8f"><div class="sl-block-content" style="z-index: 19;"><img src="ccs_instructions-3/1026004-lb_add_member_details.png" style="visibility: visible;" data-natural-width="1131" data-natural-height="868"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 669px; left: 121px; top: 533px;" data-block-id="82620d6549a189bffea89c19657263d3"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 20; color: rgb(0, 0, 0);">
+<p style="color: rgb(0, 0, 0); text-align: left;"><span style="font-size:16px">In the Members selection, tick web-app-instance.</span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 669px; left: 121px; top: 579px;" data-block-id="6d6b7c48c5ded681951088bb97bb760f"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 21; color: rgb(0, 0, 0);">
+<p style="color: rgb(0, 0, 0); text-align: left;"><span style="font-size:16px">In the Protocol Port field, type <strong>80</strong>.</span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 766px; left: 121px; top: 627px;" data-block-id="2539720aeb59dd46e99232b7af83bc83"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 23; color: rgb(0, 0, 0);">
+<p style="text-align:left"><span style="font-size:16px"><span style="text-align:left">Once completed, select </span><strong>Add</strong><span style="text-align:left"> to add the member instance.</span></span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 669px; left: 160px; top: 651.000061035156px;" data-block-id="686740e2159dce6425a1be1e3d44daf1"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 24; color: rgb(102, 102, 102);">
+<p style="text-align:left"><em><span style="font-size:16px">All other fields can be left to their default values.</span></em></p>
+</div></div></section><section data-background-size="initial"><div class="sl-block" data-block-type="text" style="width: 798px; left: 83px; top: -35px; height: auto;" data-block-id="f63e8fc0c7f2f9be60fbd77aa95e21f3">
+    <div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 12; color: rgb(0, 30, 130);">
+<h1><span style="font-size:32px">First Pool Member Added.</span></h1>
+</div>
+</div>
+<div class="sl-block" data-block-type="image" style="width: 326.261780104712px; height: 108px; left: 741px; top: 700px;" data-block-id="126d9a5ae1ca04f876ba680e0b2904a0"><div class="sl-block-content" style="z-index: 10;"><img src="ccs_instructions-3/985855-cloud_practice_white.png" style="visibility: visible;" data-natural-width="577" data-natural-height="191"></div></div>
+<div class="sl-block" data-block-type="shape" style="width: 960px; height: 700px; left: 0px; top: 0px;" data-block-id="6f278935c0f265c9f98b541bc4d5f2c9"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(255, 255, 255)" data-shape-stretch="true" style="z-index: 11;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 960 700"><rect width="960" height="700" class="shape-element" fill="rgb(255, 255, 255)"></rect></svg></div></div>
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 798px; left: 121px; top: 503px;" data-block-id="fbda8063708a2cc42645b4ec15d61006"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; color: rgb(0, 0, 0);">
+<p style="color: rgb(0, 0, 0); text-align: left;"><span style="font-size:16px">Once completed, the new member instance will be added to the <strong>web-pool</strong> Pool.</span></p>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 30.6149068322981px; height: 31px; left: 80px; top: 512px;" data-block-id="26090666e991f8dc8fe047754bbbd21d"><div class="sl-block-content" style="z-index: 14;"><img src="ccs_instructions-3/997104-BlueIcon1.png" style="visibility: visible;" data-natural-width="159" data-natural-height="161"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 30.6149068322981px; height: 31px; left: 80px; top: 560px;" data-block-id="ae98b46b9acc42737c6398d455504a40"><div class="sl-block-content" style="z-index: 15;"><img src="ccs_instructions-3/997107-BlueIcon2.png" style="visibility: visible;" data-natural-width="159" data-natural-height="161"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 569px; height: 437.993127147766px; left: 196px; top: 50px;" data-block-id="13df4176558f39a77da2814a25f58452"><div class="sl-block-content" style="z-index: 16;"><img src="ccs_instructions-3/1026009-lb_add_member_done.png" style="visibility: visible;" data-natural-width="1164" data-natural-height="896"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 740px; left: 121px; top: 550px;" data-block-id="94f42c0519686bbc7271168e8caca91d"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 17; color: rgb(0, 0, 0);">
+<p style="color:rgb(0, 0, 0); text-align:left"><span style="font-size:16px">The next step is to add a public IP address to the Pool. To do this, select the <strong>Access &amp; Security</strong> link in </span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 669px; left: 121px; top: 576px;" data-block-id="e2f7fe95d6b2d7f976e3b65661f27a09"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 19; color: rgb(0, 0, 0);">
+<p style="color:rgb(0, 0, 0); text-align:left"><span style="font-size:16px; line-height:23.1111106872559px">the Navigation Pane</span></p>
+</div></div></section><section data-background-size="initial"><div class="sl-block" data-block-type="text" style="width: 798px; left: 83px; top: -37px; height: auto;" data-block-id="94c9adc74caf5dea3e9a5d42c0b45834">
+    <div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 12; color: rgb(0, 30, 130);">
+<h1><span style="font-size:32px">Add a Public IP Address. Step One</span></h1>
+</div>
+</div>
+<div class="sl-block" data-block-type="image" style="width: 326.261780104712px; height: 108px; left: 741px; top: 698px;" data-block-id="31ecd1983f8ff98ff4e0a62ab1214e35"><div class="sl-block-content" style="z-index: 10;"><img src="ccs_instructions-3/985855-cloud_practice_white.png" style="visibility: visible;" data-natural-width="577" data-natural-height="191"></div></div>
+<div class="sl-block" data-block-type="shape" style="width: 960px; height: 700px; left: 0px; top: 0px;" data-block-id="a4e775a8523bfba7bb95cad22059dd17"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(255, 255, 255)" data-shape-stretch="true" style="z-index: 11;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 960 700"><rect width="960" height="700" class="shape-element" fill="rgb(255, 255, 255)"></rect></svg></div></div>
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 669px; left: 121px; top: 482px;" data-block-id="7923757065673b9a33feddfe85d16139"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; color: rgb(0, 0, 0);">
+<p style="text-align:left"><span style="font-size:16px"><span style="text-align:left">If not already selected, select the </span><strong>Floating IPs</strong><span style="text-align:left"> tab to display the list of available floating IPs.</span></span></p>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 30.6149068322981px; height: 31px; left: 80px; top: 490px;" data-block-id="78cf9c93331a2772563cc44e12840099"><div class="sl-block-content" style="z-index: 14;"><img src="ccs_instructions-3/997104-BlueIcon1.png" style="visibility: visible;" data-natural-width="159" data-natural-height="161"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 30.6149068322981px; height: 31px; left: 80px; top: 576px;" data-block-id="d4e480445925878b321c6125e20e70a7"><div class="sl-block-content" style="z-index: 15;"><img src="ccs_instructions-3/997107-BlueIcon2.png" style="visibility: visible;" data-natural-width="159" data-natural-height="161"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 598px; height: 382.176804541768px; left: 181px; top: 65.5px;" data-block-id="830c56097044bcf6b86029097694a885"><div class="sl-block-content" style="z-index: 16;"><img src="ccs_instructions-3/1026015-access_security_floating_ip_allocate_vip.png" style="visibility: visible;" data-natural-width="1233" data-natural-height="788"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 669px; left: 121px; top: 571px;" data-block-id="6fd4ce020b63449499839a60481dd760"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 17; color: rgb(0, 0, 0);">
+<p style="color:rgb(0, 0, 0); text-align:left"><span style="font-size:16px"><span style="text-align:left">To allocate another Floating IP, select the </span><strong>Allocate IP To Project</strong><span style="text-align:left"> button.</span></span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 719px; left: 148px; top: 502px;" data-block-id="eb5cd018083ab968c704b3da26f45599"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 18; color: rgb(102, 102, 102);">
+<p style="text-align:left"><em><span style="font-size:16px"><span style="color:rgb(128, 128, 128); text-align:left">At this stage, there will be only one Floating IP allocated. We will need to allocate another IP for our </span></span></em></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 669px; left: 148px; top: 592px;" data-block-id="d3a08176478a702279f7ba1af8316174"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 20; color: rgb(102, 102, 102);">
+<p style="text-align:left"><span style="font-size:16px"><em><span style="color:rgb(128, 128, 128); text-align:left">A pop-up window will appear.</span></em></span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 719px; left: 148px; top: 522px;" data-block-id="24e524e75f0cf8e8718b4c5b9e5699ae"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 21; color: rgb(102, 102, 102);">
+<p style="text-align:left"><em><span style="font-size:16px"><span style="color:rgb(128, 128, 128); text-align:left">Load Balancer.</span></span></em></p>
+</div></div></section><section data-background-size="initial"><div class="sl-block" data-block-type="text" style="width: 798px; left: 83px; top: -37px; height: auto;" data-block-id="be6ebd297170f8d06802195c04f4bfb5">
+    <div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 12; color: rgb(0, 30, 130);">
+<h1><span style="font-size:32px">Add a Public IP Address. Step Two</span></h1>
+</div>
+</div>
+<div class="sl-block" data-block-type="image" style="width: 326.261780104712px; height: 108px; left: 741px; top: 698px;" data-block-id="6661c4373eddecc871361158440ccd0d"><div class="sl-block-content" style="z-index: 10;"><img src="ccs_instructions-3/985855-cloud_practice_white.png" style="visibility: visible;" data-natural-width="577" data-natural-height="191"></div></div>
+<div class="sl-block" data-block-type="shape" style="width: 960px; height: 700px; left: 0px; top: 0px;" data-block-id="2989c4398e3de2e2579af84e66558316"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(255, 255, 255)" data-shape-stretch="true" style="z-index: 11;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 960 700"><rect width="960" height="700" class="shape-element" fill="rgb(255, 255, 255)"></rect></svg></div></div>
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 736px; left: 121px; top: 526px;" data-block-id="3ef80dc83608435140aed990385cf489"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; color: rgb(0, 0, 0);">
+<p style="text-align:left"><span style="text-align:left"><span style="font-size:16px">The Project Quotas should indicate that one Floating IP has been assigned (blue bar) and that you are</span></span></p>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 30.6149068322981px; height: 31px; left: 80px; top: 534px;" data-block-id="c51dee0d73a38977b775b6b187ed129e"><div class="sl-block-content" style="z-index: 15;"><img src="ccs_instructions-3/997104-BlueIcon1.png" style="visibility: visible;" data-natural-width="159" data-natural-height="161"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 30.6149068322981px; height: 31px; left: 80px; top: 590px;" data-block-id="5747e1ebc3423df4856b968384a4ada6"><div class="sl-block-content" style="z-index: 16;"><img src="ccs_instructions-3/997107-BlueIcon2.png" style="visibility: visible;" data-natural-width="159" data-natural-height="161"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 598px; height: 456.776816608997px; left: 181px; top: 51.5000038146973px;" data-block-id="da8d844f1673685f152757277aa43770"><div class="sl-block-content" style="z-index: 17;"><img src="ccs_instructions-3/1026022-access_security_floating_ip_allocate_vip_details.png" style="visibility: visible;" data-natural-width="1156" data-natural-height="883"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 669px; left: 121px; top: 585px;" data-block-id="90acd0c2a8f0aa68a168a30da05b9b90"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 18; color: rgb(0, 0, 0);">
+<p style="color:rgb(0, 0, 0); text-align:left"><span style="font-size:16px"><span style="text-align:left">Select </span><strong>Allocate IP</strong><span style="text-align:left"> to allocate the IP address to the project.</span></span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 669px; left: 148px; top: 604px;" data-block-id="7e54fcdb497e81434f84c3505ad24c61"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 19; color: rgb(102, 102, 102);">
+<p style="text-align:left"><em><span style="font-size:16px"><span style="color:rgb(128, 128, 128); text-align:left">You will be returned to the Floating IPs view.</span></span></em></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 669px; left: 121px; top: 551px;" data-block-id="61f7e0e5aea0fd11bd3d33169c2c2ea1"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 20; color: rgb(0, 0, 0);">
+<p style="text-align:left"><span style="font-size:16px"><span style="text-align:left">requesting a second Floating IP (green bar).</span></span></p>
+</div></div></section><section data-background-size="initial"><div class="sl-block" data-block-type="text" style="width: 798px; left: 83px; top: -37px; height: auto;" data-block-id="1a1f0dde148fb65c6d067105d4325978">
+    <div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 12; color: rgb(0, 30, 130);">
+<h1><span style="font-size:32px">Public IP Address Added</span></h1>
+</div>
+</div>
+<div class="sl-block" data-block-type="image" style="width: 326.261780104712px; height: 108px; left: 741px; top: 698px;" data-block-id="e09cd20d248c9ffe0b3813adc7cabfc1"><div class="sl-block-content" style="z-index: 10;"><img src="ccs_instructions-3/985855-cloud_practice_white.png" style="visibility: visible;" data-natural-width="577" data-natural-height="191"></div></div>
+<div class="sl-block" data-block-type="shape" style="width: 960px; height: 700px; left: 0px; top: 0px;" data-block-id="6a43c091c61e0eef44fe878a5bf30256"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(255, 255, 255)" data-shape-stretch="true" style="z-index: 11;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 960 700"><rect width="960" height="700" class="shape-element" fill="rgb(255, 255, 255)"></rect></svg></div></div>
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 736px; left: 121px; top: 526px;" data-block-id="889a4ab7c397c37eacb1e50970151b8d"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; color: rgb(0, 0, 0);">
+<p style="color: rgb(0, 0, 0); text-align: left;"><span style="font-size:16px">On completion, a second Public IP address will be allocated to the project.</span></p>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 30.6149068322981px; height: 31px; left: 80px; top: 534px;" data-block-id="50dcf35ac00a032e45ab2af8199ce36d"><div class="sl-block-content" style="z-index: 15;"><img src="ccs_instructions-3/997104-BlueIcon1.png" style="visibility: visible;" data-natural-width="159" data-natural-height="161"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 30.6149068322981px; height: 31px; left: 80px; top: 590px;" data-block-id="ed895a811a6d5b23f944b6ea581bd1db"><div class="sl-block-content" style="z-index: 16;"><img src="ccs_instructions-3/997107-BlueIcon2.png" style="visibility: visible;" data-natural-width="159" data-natural-height="161"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 598px; height: 457.998259355962px; left: 181px; top: 50px;" data-block-id="11fcd5c9f055498a4e7f87608800c10f"><div class="sl-block-content" style="z-index: 17;"><img src="ccs_instructions-3/1026026-access_security_floating_ip_allocate_vip_allocated.png" style="visibility: visible;" data-natural-width="1149" data-natural-height="880"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 669px; left: 121px; top: 585px;" data-block-id="07c875f60e8aab28af85f4edd2353d65"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 18; color: rgb(0, 0, 0);">
+<p style="color:rgb(0, 0, 0); text-align:left"><span style="font-size:16px"><span style="text-align:left">To associate the Public IP address with the VIP, select </span><strong>Associate</strong><span style="text-align:left">.</span></span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 669px; left: 148px; top: 604px;" data-block-id="f3875e3e1ff9751103d842114929a9b5"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 19; color: rgb(102, 102, 102);">
+<p style="text-align:left"><em><span style="font-size:16px"><span style="color:rgb(128, 128, 128); text-align:left">A pop-up window will appear.</span></span></em></p>
+</div></div></section><section data-background-size="initial"><div class="sl-block" data-block-type="text" style="width: 798px; left: 83px; top: -37px; height: auto;" data-block-id="671c79fa9b03ee71aaa78056aed538fc">
+    <div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 12; color: rgb(0, 30, 130);">
+<h1><span style="font-size:32px">Associate Public IP Address</span></h1>
+</div>
+</div>
+<div class="sl-block" data-block-type="image" style="width: 326.261780104712px; height: 108px; left: 741px; top: 698px;" data-block-id="bfe5c46525d4496202b0748cdb9f2637"><div class="sl-block-content" style="z-index: 10;"><img src="ccs_instructions-3/985855-cloud_practice_white.png" style="visibility: visible;" data-natural-width="577" data-natural-height="191"></div></div>
+<div class="sl-block" data-block-type="shape" style="width: 960px; height: 700px; left: 0px; top: 0px;" data-block-id="9fedbb9aa50667381228a6eabbc2c445"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(255, 255, 255)" data-shape-stretch="true" style="z-index: 11;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 960 700"><rect width="960" height="700" class="shape-element" fill="rgb(255, 255, 255)"></rect></svg></div></div>
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 736px; left: 121px; top: 526px;" data-block-id="f10b8f9951fda77aae303e070cea3d3a"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; color: rgb(0, 0, 0);">
+<p style="text-align:left"><span style="font-size:16px"><span style="text-align:left">In the </span><strong>Port to be associated</strong><span style="text-align:left"> drop-down menu, select the </span><strong>None: 192.168.55.35</strong></span><span style="text-align:left"><span style="font-size:16px">.</span></span></p>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 30.6149068322981px; height: 31px; left: 80px; top: 534px;" data-block-id="58cc8e7c1bd0deba0ded14699fdc15bd"><div class="sl-block-content" style="z-index: 15;"><img src="ccs_instructions-3/997104-BlueIcon1.png" style="visibility: visible;" data-natural-width="159" data-natural-height="161"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 30.6149068322981px; height: 31px; left: 80px; top: 590px;" data-block-id="77fac717bbac363832dadf77e97dfa5b"><div class="sl-block-content" style="z-index: 16;"><img src="ccs_instructions-3/997107-BlueIcon2.png" style="visibility: visible;" data-natural-width="159" data-natural-height="161"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 598px; height: 457.262398557259px; left: 181px; top: 50.5px;" data-block-id="64687398b335ab03a8bc429f5cc705c5"><div class="sl-block-content" style="z-index: 17;"><img src="ccs_instructions-3/1026039-access_security_floating_ip_associate_vip.png" style="visibility: visible;" data-natural-width="1109" data-natural-height="848"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 669px; left: 121px; top: 585px;" data-block-id="34e0cc107294d7756bc3af76719c067c"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 18; color: rgb(0, 0, 0);">
+<p style="color:rgb(0, 0, 0); text-align:left"><span style="font-size:16px"><span style="text-align:left">To complete the association, select the </span><strong>Associate</strong><span style="text-align:left"> button.</span></span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 669px; left: 148px; top: 606px;" data-block-id="e0211d2e85df8a85f110644785d5ba95"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 19; color: rgb(102, 102, 102);">
+<p style="text-align:left"><em><span style="font-size:16px"><span style="color:rgb(128, 128, 128); text-align:left">You will be returned to the Floating IPs view.</span></span></em></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 669px; left: 149px; top: 551px;" data-block-id="2a7c1b550d2ea2c1bc9744f6e6be11b6"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 20; color: rgb(102, 102, 102);">
+<p style="text-align:left"><em><span style="font-size:16px"><span style="color:rgb(128, 128, 128); text-align:left">This will associate the Public IP address to the VIP.</span></span></em></p>
+</div></div></section><section data-background-size="initial"><div class="sl-block" data-block-type="text" style="width: 798px; left: 83px; top: -37px; height: auto;" data-block-id="d1bcb346a471f5df0dfbd1dbf2ab9b9d">
+    <div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 12; color: rgb(0, 30, 130);">
+<h1><span style="font-size:32px">Public IP Address Associated.</span></h1>
+</div>
+</div>
+<div class="sl-block" data-block-type="image" style="width: 326.261780104712px; height: 108px; left: 741px; top: 698px;" data-block-id="5a0c245d0925dbc13cf1a7fd8a1da86c"><div class="sl-block-content" style="z-index: 10;"><img src="ccs_instructions-3/985855-cloud_practice_white.png" style="visibility: visible;" data-natural-width="577" data-natural-height="191"></div></div>
+<div class="sl-block" data-block-type="shape" style="width: 960px; height: 700px; left: 0px; top: 0px;" data-block-id="280c461c076913150891853e07226ce1"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(255, 255, 255)" data-shape-stretch="true" style="z-index: 11;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 960 700"><rect width="960" height="700" class="shape-element" fill="rgb(255, 255, 255)"></rect></svg></div></div>
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 736px; left: 121px; top: 526px;" data-block-id="ed01f0ddfbab138ce0ff9e918b267b9d"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; color: rgb(0, 0, 0);">
+<p style="text-align:left"><span style="text-align:left"><span style="font-size:16px">On completion, the IP address will be associated with the VIP.</span></span></p>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 30.6149068322981px; height: 31px; left: 80px; top: 534px;" data-block-id="890b640a6be3b6522023769684decdff"><div class="sl-block-content" style="z-index: 15;"><img src="ccs_instructions-3/997104-BlueIcon1.png" style="visibility: visible;" data-natural-width="159" data-natural-height="161"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 30.6149068322981px; height: 31px; left: 80px; top: 590px;" data-block-id="5144966151a48281965ab9b0e8e7a203"><div class="sl-block-content" style="z-index: 16;"><img src="ccs_instructions-3/997107-BlueIcon2.png" style="visibility: visible;" data-natural-width="159" data-natural-height="161"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 598px; height: 456.986899563319px; left: 181px; top: 50.5px;" data-block-id="32cc28f8299b06187a9cde629d7f81db"><div class="sl-block-content" style="z-index: 17;"><img src="ccs_instructions-3/1026043-access_security_floating_ip_associated_vip.png" style="visibility: visible;" data-natural-width="1145" data-natural-height="875"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 795px; left: 121px; top: 586px;" data-block-id="afe72751354b8e8f51db9a7e0405384a"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 18; color: rgb(0, 0, 0);">
+<p style="color: rgb(0, 0, 0); text-align: left;"><span style="font-size:16px">The next step is to add a second web server instance. To start, select <strong>Instances</strong> from the Navigation pane.</span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 669px; left: 146px; top: 546px;" data-block-id="240818f08d06cf3dd0f21d520e84549a"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 19; color: rgb(102, 102, 102);">
+<p style="text-align:left"><span style="font-size:16px"><em><span style="color:rgb(128, 128, 128); text-align:left">NOTE: In the Instance column, the value should be “-“.</span></em></span></p>
+</div></div></section><section data-background-size="initial"><div class="sl-block" data-block-type="text" style="width: 798px; left: 90px; top: 112px; height: auto;" data-block-id="9fef1d24e945cbcfbd880ec3bb95c214">
+    <div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 12; color: rgb(0, 30, 130);" dir="ui">
+<h1><span style="font-size:64px">Challenge Time!</span></h1>
+</div>
+</div>
+<div class="sl-block" data-block-type="image" style="width: 326.261780104712px; height: 108px; left: 741px; top: 698px;" data-block-id="37cf1008b7a45280da9242eab1215c62"><div class="sl-block-content" style="z-index: 10;"><img src="ccs_instructions-3/985855-cloud_practice_white.png" style="visibility: visible;" data-natural-width="577" data-natural-height="191"></div></div>
+<div class="sl-block" data-block-type="shape" style="width: 960px; height: 700px; left: 0px; top: 0px;" data-block-id="e9b899e8c1dcfb3bffa3ca2d3cd27855"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(255, 255, 255)" data-shape-stretch="true" style="z-index: 11;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 960 700"><rect width="960" height="700" class="shape-element" fill="rgb(255, 255, 255)"></rect></svg></div></div>
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 736px; left: 112px; top: 267px;" data-block-id="2794cfe73d531b87d4f7052389d72c3d"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; color: rgb(0, 0, 0);">
+<p style="text-align:left"><span style="font-size:16px"><span style="text-align:start">For this second web server, we have not provided any instructions, but you've done it before.</span></span></p>
+</div></div>
+
+
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 669px; left: 112px; top: 294px;" data-block-id="239acdaf26f8ed89fa6fc72368ee41df"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 20; color: rgb(0, 0, 0);">
+<p style="text-align:left"><span style="font-size:16px"><span style="text-align:start">When creating the instance, click </span><a href="https://raw.githubusercontent.com/cloudpractice/WeatherApp/master/build-scripts/linux-vm-load.txt" target="_blank">HERE</a><span style="text-align:start"> for the new post-creation script.</span></span></p>
+</div></div></section><section data-background-size="initial"><div class="sl-block" data-block-type="text" style="width: 798px; left: 83px; top: -37px; height: auto;" data-block-id="760d90cb5627333b63d2c9889616fa23">
+    <div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 12; color: rgb(0, 30, 130);">
+<h1><span style="font-size:32px">Add Second Instance to Pool.</span></h1>
+</div>
+</div>
+<div class="sl-block" data-block-type="image" style="width: 326.261780104712px; height: 108px; left: 741px; top: 698px;" data-block-id="d66c831e489c8078a683b25dc6f00d11"><div class="sl-block-content" style="z-index: 10;"><img src="ccs_instructions-3/985855-cloud_practice_white.png" style="visibility: visible;" data-natural-width="577" data-natural-height="191"></div></div>
+<div class="sl-block" data-block-type="shape" style="width: 960px; height: 700px; left: 0px; top: 0px;" data-block-id="b84696c1cba1a2a5c734f91b4ba22372"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(255, 255, 255)" data-shape-stretch="true" style="z-index: 11;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 960 700"><rect width="960" height="700" class="shape-element" fill="rgb(255, 255, 255)"></rect></svg></div></div>
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 736px; left: 121px; top: 526px;" data-block-id="ef6f0e6af2a5338eab90c4076f28d336"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; color: rgb(0, 0, 0);">
+<p style="color: rgb(0, 0, 0); text-align: left;"><span style="font-size:16px">On completion, a second web server instance will appear in the Instances list.</span></p>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 30.6149068322981px; height: 31px; left: 80px; top: 534px;" data-block-id="19297b62485ed73377532b1f4c267289"><div class="sl-block-content" style="z-index: 15;"><img src="ccs_instructions-3/997104-BlueIcon1.png" style="visibility: visible;" data-natural-width="159" data-natural-height="161"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 30.6149068322981px; height: 31px; left: 80px; top: 590px;" data-block-id="e1576df338219205d83aa2f169ba6613"><div class="sl-block-content" style="z-index: 16;"><img src="ccs_instructions-3/997107-BlueIcon2.png" style="visibility: visible;" data-natural-width="159" data-natural-height="161"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 598px; height: 455.814592274678px; left: 181px; top: 51px;" data-block-id="3283fb228be83121283f3e5e1e508bf6"><div class="sl-block-content" style="z-index: 17;"><img src="ccs_instructions-3/1026047-instance_second_created.png" style="visibility: visible;" data-natural-width="1165" data-natural-height="888"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 746px; left: 121px; top: 582px;" data-block-id="2230b175cffd3bddf9eec2b575b8e32c"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 18; color: rgb(0, 0, 0);">
+<p style="color:rgb(0, 0, 0); text-align:left"><span style="font-size:16px">The next step is to add this second web server instance to the load balancer. Select <strong>Load Balancers</strong> link </span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 669px; left: 121px; top: 602px;" data-block-id="1a87734c495df261f92d3a2dc12a0cb7"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 20; color: rgb(0, 0, 0);">
+<p style="text-align:left"><span style="font-size:16px"><span style="text-align:left">in the Navigation pane.</span></span></p>
+</div></div></section><section data-background-size="initial"><div class="sl-block" data-block-type="text" style="width: 798px; left: 83px; top: -35px; height: auto;" data-block-id="4e718f5b0a2c01845ad071ca5c206c24">
+    <div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 12; color: rgb(0, 30, 130);">
+<h1><span style="font-size:32px">Add Second Instance to Pool. Step One.</span></h1>
+</div>
+</div>
+<div class="sl-block" data-block-type="image" style="width: 326.261780104712px; height: 108px; left: 741px; top: 700px;" data-block-id="5f057862f22a22d7773f68ab3a5bf932"><div class="sl-block-content" style="z-index: 10;"><img src="ccs_instructions-3/985855-cloud_practice_white.png" style="visibility: visible;" data-natural-width="577" data-natural-height="191"></div></div>
+<div class="sl-block" data-block-type="shape" style="width: 960px; height: 700px; left: 0px; top: 1px;" data-block-id="4a149f696c9166c19d9a78db3bd11408"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(255, 255, 255)" data-shape-stretch="true" style="z-index: 11;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 960 700"><rect width="960" height="700" class="shape-element" fill="rgb(255, 255, 255)"></rect></svg></div></div>
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 798px; left: 121px; top: 487px;" data-block-id="777cca983a86d8e17a91ccdea01af50b"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; color: rgb(0, 0, 0);">
+<p style="color: rgb(0, 0, 0); text-align: left;"><span style="font-size:16px">If it is not already selected, select the <strong>Members</strong> tab.</span></p>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 30.6149068322981px; height: 31px; left: 80px; top: 495px;" data-block-id="e469b93ed4aaf351325811be92d2a614"><div class="sl-block-content" style="z-index: 15;"><img src="ccs_instructions-3/997104-BlueIcon1.png" style="visibility: visible;" data-natural-width="159" data-natural-height="161"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 30.6149068322981px; height: 31px; left: 80px; top: 543px;" data-block-id="5e3fbb6aad615dfbfb84e3e4d807f365"><div class="sl-block-content" style="z-index: 16;"><img src="ccs_instructions-3/997107-BlueIcon2.png" style="visibility: visible;" data-natural-width="159" data-natural-height="161"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 30.6149068322981px; height: 31px; left: 80px; top: 588px;" data-block-id="075991ec889f6cafb2289d1924a49849"><div class="sl-block-content" style="z-index: 17;"><img src="ccs_instructions-3/997111-BlueIcon3.png" style="visibility: visible;" data-natural-width="159" data-natural-height="161"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 569px; height: 434.077264653641px; left: 196px; top: 52px;" data-block-id="a956a58f0c7ae5540f4268127470a5f1"><div class="sl-block-content" style="z-index: 19;"><img src="ccs_instructions-3/1026049-lb_add_second_member.png" style="visibility: visible;" data-natural-width="1126" data-natural-height="859"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 669px; left: 121px; top: 533px;" data-block-id="292c118068db48f0c7d021a6a5f837b2"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 20; color: rgb(0, 0, 0);">
+<p style="color: rgb(0, 0, 0); text-align: left;"><span style="font-size:16px">The existing web server instance should be in the Member list.</span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 669px; left: 121px; top: 579px;" data-block-id="2581202235eab56f38e86926fb889125"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 21; color: rgb(0, 0, 0);">
+<p style="color:rgb(0, 0, 0); text-align:left"><span style="font-size:16px"><span style="text-align:left">To add the second web server instance, select </span><strong>+ Add Member</strong><span style="text-align:left">.</span></span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 669px; left: 131px; top: 599px;" data-block-id="7b0272184956426eebedf6c9b0beb9be"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 24; color: rgb(102, 102, 102);">
+<p style="text-align:left"><em><span style="font-size:16px"><span style="color:rgb(128, 128, 128); text-align:left">A pop-up window will appear.</span></span></em></p>
+</div></div></section><section data-background-size="initial"><div class="sl-block" data-block-type="text" style="width: 798px; left: 83px; top: -37px; height: auto;" data-block-id="69e2f29343848a19bc7bb5d08b1c9885">
+    <div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 12; color: rgb(0, 30, 130);">
+<h1><span style="font-size:32px">Second Instance Added to Pool.</span></h1>
+</div>
+</div>
+<div class="sl-block" data-block-type="image" style="width: 326.261780104712px; height: 108px; left: 741px; top: 698px;" data-block-id="97ec3d909dcaa2324bce2d59ba02fd6a"><div class="sl-block-content" style="z-index: 10;"><img src="ccs_instructions-3/985855-cloud_practice_white.png" style="visibility: visible;" data-natural-width="577" data-natural-height="191"></div></div>
+<div class="sl-block" data-block-type="shape" style="width: 960px; height: 700px; left: 0px; top: 0px;" data-block-id="11198d6081e9559bdac8e672508f9a3a"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(255, 255, 255)" data-shape-stretch="true" style="z-index: 11;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 960 700"><rect width="960" height="700" class="shape-element" fill="rgb(255, 255, 255)"></rect></svg></div></div>
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 736px; left: 121px; top: 526px;" data-block-id="5fd0118f3edddc5d1af8bde703aa2060"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; color: rgb(0, 0, 0);">
+<p style="color: rgb(0, 0, 0); text-align: left;"><span style="font-size:16px">On completion, there should be two instance members in the Members list.</span></p>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 30.6149068322981px; height: 31px; left: 80px; top: 534px;" data-block-id="1d012de17c2cbad54087c5ed88fe9928"><div class="sl-block-content" style="z-index: 15;"><img src="ccs_instructions-3/997104-BlueIcon1.png" style="visibility: visible;" data-natural-width="159" data-natural-height="161"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 30.6149068322981px; height: 31px; left: 80px; top: 590px;" data-block-id="198a09a69603dfdfb876a88a075985a5"><div class="sl-block-content" style="z-index: 16;"><img src="ccs_instructions-3/997107-BlueIcon2.png" style="visibility: visible;" data-natural-width="159" data-natural-height="161"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 598px; height: 457.544483985765px; left: 181px; top: 50.5px;" data-block-id="7d0bcc2172d6510f7e1823c8006c58a2"><div class="sl-block-content" style="z-index: 17;"><img src="ccs_instructions-3/1026050-lb_add_second_member_done.png" style="visibility: visible;" data-natural-width="1124" data-natural-height="860"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 669px; left: 121px; top: 585px;" data-block-id="9dd067853634dbb7127fa9d47a335cf5"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 18; color: rgb(0, 0, 0);">
+<p style="color:rgb(0, 0, 0); text-align:left"><span style="font-size:16px"><span style="text-align:left">The next step is to check out the website!</span></span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 669px; left: 148px; top: 604px;" data-block-id="aaa8191d11e0df70c635d4b5e4f36c3e"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 19; color: rgb(102, 102, 102);">
+<p style="text-align:left"><em><span style="font-size:16px"><span style="color:rgb(128, 128, 128); text-align:left">If you need to recall the IP address, select </span><strong>Access &amp; Security</strong><span style="color:rgb(128, 128, 128); text-align:left">.</span></span></em></p>
+</div></div></section><section data-background-size="initial"><div class="sl-block" data-block-type="text" style="width: 798px; left: 83px; top: -35px; height: auto;" data-block-id="224b6fc1bdcda9406792c90504d92e92">
+    <div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 12; color: rgb(0, 30, 130);">
+<h1><span style="font-size:32px">Recall Public IP Address</span></h1>
+</div>
+</div>
+<div class="sl-block" data-block-type="image" style="width: 326.261780104712px; height: 108px; left: 741px; top: 700px;" data-block-id="62628d626d6e57828cef2e5288cef483"><div class="sl-block-content" style="z-index: 10;"><img src="ccs_instructions-3/985855-cloud_practice_white.png" style="visibility: visible;" data-natural-width="577" data-natural-height="191"></div></div>
+<div class="sl-block" data-block-type="shape" style="width: 960px; height: 700px; left: 0px; top: 1px;" data-block-id="a93db8a65a81494f4c51960483896ca9"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(255, 255, 255)" data-shape-stretch="true" style="z-index: 11;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 960 700"><rect width="960" height="700" class="shape-element" fill="rgb(255, 255, 255)"></rect></svg></div></div>
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 798px; left: 121px; top: 487px;" data-block-id="9571fbf26dc93076990db9d24bab37b8"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; color: rgb(0, 0, 0);">
+<p style="color: rgb(0, 0, 0); text-align: left;"><span style="font-size:16px">If not already selected, select the “Floating IPs” tab.</span></p>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 30.6149068322981px; height: 31px; left: 80px; top: 495px;" data-block-id="e82394b14c8df0fa9ea7f7ed40423cfe"><div class="sl-block-content" style="z-index: 15;"><img src="ccs_instructions-3/997104-BlueIcon1.png" style="visibility: visible;" data-natural-width="159" data-natural-height="161"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 30.6149068322981px; height: 31px; left: 80px; top: 543px;" data-block-id="37e8b9e45f8835d852133ff96843e4cd"><div class="sl-block-content" style="z-index: 16;"><img src="ccs_instructions-3/997107-BlueIcon2.png" style="visibility: visible;" data-natural-width="159" data-natural-height="161"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 30.6149068322981px; height: 31px; left: 80px; top: 588px;" data-block-id="36ea3df4e865e234020590de2c0c54e1"><div class="sl-block-content" style="z-index: 17;"><img src="ccs_instructions-3/997111-BlueIcon3.png" style="visibility: visible;" data-natural-width="159" data-natural-height="161"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 569px; height: 434.825327510917px; left: 196px; top: 52px;" data-block-id="917834d9732fb3c904741e3f61347de6"><div class="sl-block-content" style="z-index: 19;"><img src="ccs_instructions-3/1026052-access_security_floating_ip_associated_vip_2.png" style="visibility: visible;" data-natural-width="1145" data-natural-height="875"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 708px; left: 121px; top: 533px;" data-block-id="16db7e67ceb47fd007a50922df9afa18"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 20; color: rgb(0, 0, 0);">
+<p style="color: rgb(0, 0, 0); text-align: left;"><span style="font-size:16px">Copy the IP address of the VIP, open a new tab in your web browser and paste in the IP address</span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 732px; left: 121px; top: 579px;" data-block-id="8f167af848789285285145a4a3bad41a"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 21; color: rgb(0, 0, 0);">
+<p style="color: rgb(0, 0, 0); text-align: left;"><span style="font-size:16px">Try to access the IP Address from different web browsers to see if you can get different responses.</span></p>
+</div></div></section>
+			</div>
+		</div>
+
+		<script>
+			var SLConfig = {"deck": {"id":335284,"slug":"ccs_instructions-3","title":"Copy of CCS_instructions","description":"Cloud Practice CCS Training","visibility":"self","published_at":null,"sanitize_messages":null,"thumbnail_url":"https://s3.amazonaws.com/media-p.slid.es/thumbnails/timc/d12606/ccs_instructions-3.jpg","view_count":0,"user":{"id":266061,"username":"timc","name":"","email":"tim.j.conrad@gmail.com","description":"","thumbnail_url":"https://www.gravatar.com/avatar/b8203dcae581b2dcc7babcb70c36b8c9?s=140\u0026d=https%3A%2F%2Fs3.amazonaws.com%2Fstatic.slid.es%2Fimages%2Fdefault-profile-picture.png","pro":true,"enterprise":false,"enterprise_manager":false,"notify_on_receipt":false,"billing_address":null,"editor_tutorial_completed":true,"settings":{"id":86693,"present_controls":true,"present_upsizing":true,"editor_grid":true,"editor_snap":true,"developer_mode":true},"registered":true},"background_transition":"convex","transition":"default","theme_id":null,"theme_font":"helvetica","theme_color":"white-blue","auto_slide_interval":0,"comments_enabled":true,"forking_enabled":false,"rolling_links":false,"center":false,"should_loop":false,"rtl":false,"version":2,"notes":{}}};
+		</script>
+
+		<script>
+			SLConfig.current_user = {
+				name: "",
+				username: "timc",
+				pro: true
+			};
+		</script>
+
+		<script src="lib/head.min.js"></script>
+		<script src="lib/reveal.min.js"></script>
+		<script>
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				mouseWheel: false,
+
+				autoSlide: SLConfig.deck.auto_slide_interval || 0,
+				autoSlideStoppable: true,
+
+				rolling_links: SLConfig.deck.rolling_links || true,
+				center: SLConfig.deck.center || false,
+				loop: SLConfig.deck.should_loop || false,
+				rtl: SLConfig.deck.rtl || false,
+
+				transition: SLConfig.deck.transition,
+				backgroundTransition: SLConfig.deck.background_transition,
+
+				dependencies: [
+					{ src: 'lib/reveal-plugins/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'lib/reveal-plugins/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'lib/reveal-plugins/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'lib/reveal-plugins/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+			if( SLConfig.deck.notes ) {
+				[].forEach.call( document.querySelectorAll( '.reveal .slides section' ), function( slide ) {
+
+					var value = SLConfig.deck.notes[ slide.getAttribute( 'data-id' ) ];
+					if( value && typeof value === 'string' ) {
+						slide.setAttribute( 'data-notes', value );
+					}
+
+				} );
+			}
+		</script>
+
+		
+
+	</body>
+</html>
